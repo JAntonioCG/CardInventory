@@ -23,10 +23,10 @@
     public function obtenerCartasPorExpancion($Expancion) {
       return $this->cardRepository->obtenerCartasPorExpancion($Expancion);  // Devolverá un array de cartas
     } 
-    public function obtenerCartasPorExpancion($Expancion) {
+    public function obtenerCartasPorExpanciont ($Expancion) {
       return $this->cardRepository->obtenerCartasPorExpancion($Expancion);  // Devolverá un array de cartas
     } 
-    public function obtenerCartasPorExpancion($Expancion) {
+    public function obtenerCartasPorExpancions ($Expancion) {
       return $this->cardRepository->obtenerCartasPorExpancion($Expancion);  // Devolverá un array de cartas
     }  
   }
