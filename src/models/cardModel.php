@@ -5,4 +5,5 @@
     public $expansion;
     public $rarity;
     public $category;
+    public $Expancion;
   }
