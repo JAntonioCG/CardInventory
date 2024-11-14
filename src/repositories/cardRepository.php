@@ -18,10 +18,20 @@
     }
 
     public function obtenerCartasPorNombre($name) {
-      $sql = "SELECT * FROM Cards WHERE name = :name";
+      $sql = "SELECT * FROM Cards WHERE name LIKE :name";
       $resultado = $this->conn->prepare($sql);
-      $resultado->bindParam(':name', $name);
+      $searchTerm = "%$name%";  // Usamos LIKE para hacer coincidencias parciales
+      $resultado->bindParam(':name', $searchTerm);
       $resultado->execute();
-      return $resultado->fetch(PDO::FETCH_ASSOC);
+      return $resultado->fetchAll(PDO::FETCH_ASSOC);  // Usamos fetchAll para devolver todas las coincidencias
     }
+    
+    public function obtenerCartasPorCategoria($category) {
+      $sql = "SELECT * FROM Cards WHERE category LIKE :category";
+      $resultado = $this->conn->prepare($sql);
+      $searchTerm = "%$category%";  // Usamos LIKE para hacer coincidencias parciales
+      $resultado->bindParam(':category', $searchTerm);
+      $resultado->execute();
+      return $resultado->fetchAll(PDO::FETCH_ASSOC);  // Usamos fetchAll para devolver todas las coincidencias
+    }    
   }

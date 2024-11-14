@@ -14,6 +14,10 @@
     }
 
     public function obtenerCartasPorNombre($name) {
-      return $this->cardRepository->obtenerCartasPorNombre($name);
+      return $this->cardRepository->obtenerCartasPorNombre($name);  // Esto debería devolver un array de cartas
     }
+    
+    public function obtenerCartasPorCategoria($category) {
+      return $this->cardRepository->obtenerCartasPorCategoria($category);  // Devolverá un array de cartas
+    }    
   }

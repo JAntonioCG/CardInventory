@@ -21,9 +21,14 @@
     return json_encode($cardController->obtenerCartas());
   });
 
-  $router->post('/carta/detalle', function() use ($cardController) {
+  $router->post('/cartas/nombre', function() use ($cardController) {
     $name = json_decode(file_get_contents("php://input"), true);
-    return json_encode($cardController->obtenerCartasPorNombre($name));
+    return json_encode($cardController->obtenerCartasPorNombre($name['name']));
+  });
+
+  $router->post('/cartas/category', function() use ($cardController) {
+    $category= json_decode(file_get_contents("php://input"), true);
+    return json_encode($cardController->obtenerCartasPorCategoria($category['category']));
   });
 
   $router->dispatch();
