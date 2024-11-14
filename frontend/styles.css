@@ -23,7 +23,7 @@
 .custom-card {
   width: 216.5px;  /* Asegura el ancho correcto */
   height: 304px;   /* Asegura la altura de la tarjeta */
-  border-radius: 9px;
+  border-radius: 12px;
   border-width: 9px;
   margin-left: 0px;
   margin-top: 0px;
@@ -88,10 +88,10 @@
   padding: 20px 0;
 }
 
-/* Configuración de las tarjetas */
 .card {
   min-width: 216.5px;  /* Ajusta el ancho mínimo de las tarjetas */
   flex-shrink: 0;
+  border-radius: 13px;
   margin: 0; /* Elimina márgenes adicionales que pudieran causar desajustes */
 }
 
