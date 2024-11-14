@@ -26,20 +26,5 @@
       return $resultado->fetchAll(PDO::FETCH_ASSOC);  // Usamos fetchAll para devolver todas las coincidencias
     }
     
-    public function obtenerCartasPorCategoria($category) {
-      $sql = "SELECT * FROM Cards WHERE category LIKE :category";
-      $resultado = $this->conn->prepare($sql);
-      $searchTerm = "%$category%";  // Usamos LIKE para hacer coincidencias parciales
-      $resultado->bindParam(':category', $searchTerm);
-      $resultado->execute();
-      return $resultado->fetchAll(PDO::FETCH_ASSOC);  // Usamos fetchAll para devolver todas las coincidencias
-    }    
-    public function obtenerCartasPorExpancion($Expancion) {
-      $sql = "SELECT * FROM Cards WHERE Expancion LIKE :Expancion";
-      $resultado = $this->conn->prepare($sql);
-      $searchTerm = "%$Expancion%";  // Usamos LIKE para hacer coincidencias parciales
-      $resultado->bindParam(':Expancion', $searchTerm);
-      $resultado->execute();
-      return $resultado->fetchAll(PDO::FETCH_ASSOC);  // Usamos fetchAll para devolver todas las coincidencias
-    }
+    
   }
