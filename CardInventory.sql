@@ -26,6 +26,7 @@ CREATE TABLE Cards (
     rarity VARCHAR(50) NOT NULL,
     category VARCHAR(50) NOT NULL,
     card_number VARCHAR(20) NOT NULL,
+    card_url VARCHAR(255) NOT NULL,
     FOREIGN KEY (subexpansion_id) REFERENCES Subexpansions(subexpansion_id),
     UNIQUE (name, subexpansion_id, card_number)  -- Cada carta debe ser única en su subexpansión
 );
@@ -73,7 +74,8 @@ CREATE PROCEDURE AddCardToInventory (
     IN cardNumber VARCHAR(20),
     IN cardCondition VARCHAR(50),
     IN cardPrice DECIMAL(10, 2),
-    IN cardStock INT
+    IN cardStock INT,
+    IN cardURL VARCHAR(255) -- URL de la carta
 )
 BEGIN
     DECLARE expansionID INT;
@@ -95,12 +97,19 @@ BEGIN
         SET subexpansionID = LAST_INSERT_ID();
     END IF;
 
-    -- Verifica o inserta la carta
-    SELECT card_id INTO cardID FROM Cards WHERE name = cardName AND subexpansion_id = subexpansionID AND card_number = cardNumber;
+    -- Verifica o inserta la carta con la URL
+    SELECT card_id INTO cardID 
+    FROM Cards 
+    WHERE name = cardName AND subexpansion_id = subexpansionID AND card_number = cardNumber;
     IF cardID IS NULL THEN
-        INSERT INTO Cards (name, subexpansion_id, rarity, category, card_number)
-        VALUES (cardName, subexpansionID, cardRarity, cardCategory, cardNumber);
+        INSERT INTO Cards (name, subexpansion_id, rarity, category, card_number, card_url)
+        VALUES (cardName, subexpansionID, cardRarity, cardCategory, cardNumber, cardURL);
         SET cardID = LAST_INSERT_ID();
+    ELSE
+        -- Si la carta ya existe, actualiza la URL si es diferente
+        UPDATE Cards 
+        SET card_url = cardURL
+        WHERE card_id = cardID AND card_url <> cardURL;
     END IF;
 
     -- Verifica el estado de conservación
@@ -112,10 +121,13 @@ BEGIN
     -- Inserta o actualiza el inventario de la carta
     INSERT INTO CardInventory (card_id, condition_id, price, stock)
     VALUES (cardID, conditionID, cardPrice, cardStock)
-    ON DUPLICATE KEY UPDATE price = cardPrice, stock = stock + cardStock;
+    ON DUPLICATE KEY UPDATE 
+        price = cardPrice,
+        stock = stock + cardStock;
 END //
 
 DELIMITER ;
+
 
 -- Crea todas las categorías principales
 INSERT INTO Expansions (name) VALUES
@@ -255,20 +267,45 @@ INSERT INTO SubExpansions (expansion_id, name) VALUES
 	((SELECT expansion_id FROM Expansions WHERE name = 'Scarlet & Violet'), 'Surging Sparks'),
 	((SELECT expansion_id FROM Expansions WHERE name = 'Scarlet & Violet'), 'Prismatic Evolutions');
 
-
-
 /*
 CALL AddCardToInventory(
-    'Sword & Shield',  -- Expansión principal
-    'Evolving Skies',  -- Subexpansión
-    'Pinsir',          -- Nombre de la carta
-    'Common',          -- Rareza
-    'Plant',           -- Categoría (tipo)
-    '001/203',         -- Número de carta
-    'Near Mint',       -- Estado de conservación
-    5.00,              -- Precio
-    10                 -- Stock
+    'Sun & Moon',                -- Expansión
+    'Team Up',                   -- Subexpansión
+    'Eevee & Snorlax GX',        -- Nombre
+    'Ultra Rare',                -- Rareza
+    'Colorless',                 -- Categoría
+    '120',                       -- Número
+    'Good',                      -- Condición
+    8.50,                        -- Precio
+    12,                          -- Stock
+    'https://example.com/cards/eevee-snorlax'  -- URL
 );
+
+SELECT 
+    c.card_id,
+    c.name AS card_name,
+    c.rarity,
+    c.category,
+    c.card_number,
+    c.card_url,
+    s.name AS subexpansion_name,
+    e.name AS expansion_name,
+    ci.stock,
+    ci.price,
+    cc.condition_name AS card_condition
+FROM 
+    Cards c
+JOIN 
+    Subexpansions s ON c.subexpansion_id = s.subexpansion_id
+JOIN 
+    Expansions e ON s.expansion_id = e.expansion_id
+JOIN 
+    CardInventory ci ON c.card_id = ci.card_id
+JOIN 
+    CardConditions cc ON ci.condition_id = cc.condition_id
+WHERE 
+    c.name = 'Eevee & Snorlax GX' 
+    AND s.name = 'Team Up';
 */
 
 /*
@@ -284,7 +321,6 @@ CALL AddCardToInventory(
     10                 -- Stock
 );
 */
-
 -- Una carta puede tener mas de un estado de conservacion
 -- Una carta puede tener mas de un solo precio
 -- Una carta con el mismo nombre es la misma carta a menos de que sea otra rareza
