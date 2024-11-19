@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const categories = [
     'electric', 'water', 'steel', 'bug', 'dragon', 'ghost', 
     'fire', 'fairy', 'ice', 'fighting', 'normal', 'grass', 
-    'psychic', 'rock', 'dark', 'ground', 'poison', 'flying'
+    'psychic', 'rock', 'dark', 'ground', 'poison', 'flying', 
+    'colorless energy', 'common'
   ];
 
   const expansions = [

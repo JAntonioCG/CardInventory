@@ -294,7 +294,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_024_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_024_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -307,7 +307,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_025_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_025_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -423,7 +423,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_034_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_034_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -436,7 +436,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_035_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_035_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -617,7 +617,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_049_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_049_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -630,7 +630,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_050_R_Holo_VMAX_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_050_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -668,7 +668,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_053_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_053_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -733,7 +733,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_058_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_058_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -810,7 +810,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_064_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_064_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -914,7 +914,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_072_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_072_R_EN_LG.png'  -- URL
 );
 CALL AddCardToInventory(
     'Sword & Shield',                	-- Expansión
@@ -952,7 +952,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_075_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_075_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -965,7 +965,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_076_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_076_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1004,7 +1004,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_079_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_079_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1017,7 +1017,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_080_R_Holo_VMAX_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_080_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1081,7 +1081,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_085_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_085_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1094,7 +1094,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_086_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_086_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1159,7 +1159,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_091_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_091_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1262,7 +1262,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_099_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_099_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1326,7 +1326,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_104_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_104_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1404,7 +1404,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_110_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_110_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1468,7 +1468,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_115_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_115_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1481,7 +1481,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_116_R_Holo_VMAX_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_116_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1520,7 +1520,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_119_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_119_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1533,7 +1533,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_120_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_120_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1597,7 +1597,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_124_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_124_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1649,7 +1649,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_128_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_128_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1765,7 +1765,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_137_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_137_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1778,7 +1778,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_138_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_138_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1791,7 +1791,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_139_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_139_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1816,7 +1816,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_141_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_141_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1829,7 +1829,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_142_R_Holo_VMAX_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_142_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1907,7 +1907,7 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_148_R_Holo_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_148_R_EN_LG.png'  -- URL
 );
 
 CALL AddCardToInventory(
@@ -1997,5 +1997,5 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_155_R_Holo_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_155_R_V_EN_LG.png'  -- URL
 );
