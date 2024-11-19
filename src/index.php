@@ -12,10 +12,12 @@
 
   require_once BASE_PATH . '/simpleRouter.php';
   require_once BASE_PATH . '/controllers/cardController.php';
+  require_once BASE_PATH . '/controllers/expansionsController.php';
   require_once BASE_PATH . '/middleware/authMiddleware.php';
 
   $router = new SimpleRouter();
   $cardController = new cardController();
+  $expansionsController = new expansionsController();
 
   $router->get('/cartas', function() use ($cardController) {
     return json_encode($cardController->obtenerCartas());
@@ -31,5 +33,15 @@
     return json_encode($cardController->obtenerCartasPorCategoria($category['category']));
   });
 
+  $router->post('/cartas/subexpansion', function() use ($cardController) {
+    $subexpansion_id = json_decode(file_get_contents("php://input"), true);
+    return json_encode($cardController->obtenerCartasPorSubexpansion($subexpansion_id['subexpansion_id']));
+  });
+
+  $router->post('/cartas/expansion', function() use ($expansionsController) {
+    $name = json_decode(file_get_contents("php://input"), true);
+    return json_encode($expansionsController->obtenerCartasPorExpansion($name['name']));
+  });
+  
   $router->dispatch();
 

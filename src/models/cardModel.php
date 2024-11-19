@@ -2,8 +2,8 @@
   class Cartas {
     public $card_id;
     public $name;
-    public $expansion;
+    public $subexpansion_id;
     public $rarity;
     public $category;
-    public $Expancion;
+    public $card_number;
   }
