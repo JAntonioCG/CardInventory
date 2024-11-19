@@ -1,5 +1,5 @@
 <?php
-  class SimpleRouter {
+class SimpleRouter {
     private $routes = [];
 
     public function post($path, $callback) {
@@ -33,5 +33,5 @@
         http_response_code(404);
         echo json_encode(['error' => 'Not Found']);
     }      
-  }
+}
 
