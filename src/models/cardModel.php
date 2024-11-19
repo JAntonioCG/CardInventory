@@ -6,4 +6,5 @@
     public $rarity;
     public $category;
     public $card_number;
+    public $card_url;
   }

@@ -38,7 +38,8 @@
                 c.name AS CardName,
                 c.card_number AS CardNumber,
                 c.rarity AS Rarity,
-                c.category AS Category
+                c.category AS Category,
+                c.card_url AS CardUrl
             FROM 
                 expansions e
             JOIN 

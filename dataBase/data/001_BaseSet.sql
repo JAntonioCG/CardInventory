@@ -5,7 +5,7 @@ CALL AddCardToInventory(
     'Alakazam',        			-- Nombre
     'Rara Holo',                -- Rareza
     'Psychic',                	-- Categoría
-    '1/102',                    -- Número
+    '001/102',                    -- Número
 	'Good',                     -- Condición
 	8.50,                      -- Precio
     12,                         -- Stock
@@ -17,7 +17,7 @@ CALL AddCardToInventory(
     'Blastoise',        			-- Nombre
     'Rara Holo',                -- Rareza
     'Water',                	-- Categoría
-    '2/102',                    -- Número
+    '002/102',                    -- Número
 	'Good',                     -- Condición
 	8.50,                      -- Precio
     12,                         -- Stock
@@ -29,7 +29,7 @@ CALL AddCardToInventory(
     'Chansey',        			-- Nombre
     'Rara Holo',                -- Rareza
     'Colorless',                	-- Categoría
-    '3/102',                    -- Número
+    '003/102',                    -- Número
 	'Good',                     -- Condición
 	8.50,                      -- Precio
     12,                         -- Stock
@@ -41,7 +41,7 @@ CALL AddCardToInventory(
     'Charizard',        		-- Nombre
     'Rara Holo',                -- Rareza
     'Fire',                	-- Categoría
-    '4/102',                    -- Número
+    '004/102',                    -- Número
 	'Good',                     -- Condición
 	8.50,                      -- Precio
     12,                         -- Stock
@@ -53,7 +53,7 @@ CALL AddCardToInventory(
     'Clefairy', 
     'Rare Holo', 
     'Colorless', 
-    '5/102', 
+    '005/102', 
     'Good', 
     6.50, 
     10, 
@@ -66,7 +66,7 @@ CALL AddCardToInventory(
     'Gyarados', 
     'Rare Holo', 
     'Water', 
-    '6/102', 
+    '006/102', 
     'Good', 
     7.00, 
     8, 
@@ -79,7 +79,7 @@ CALL AddCardToInventory(
     'Hitmonchan', 
     'Rare Holo', 
     'Fighting', 
-    '7/102', 
+    '007/102', 
     'Good', 
     5.00, 
     15, 
@@ -92,7 +92,7 @@ CALL AddCardToInventory(
     'Machamp', 
     'Rare Holo', 
     'Fighting', 
-    '8/102', 
+    '008/102', 
     'Good', 
     8.00, 
     10, 
@@ -105,7 +105,7 @@ CALL AddCardToInventory(
     'Magneton', 
     'Rare Holo', 
     'Lightning', 
-    '9/102', 
+    '009/102', 
     'Good', 
     9.00, 
     7, 
@@ -118,7 +118,7 @@ CALL AddCardToInventory(
     'Mewtwo', 
     'Rare Holo', 
     'Psychic', 
-    '10/102', 
+    '010/102', 
     'Good', 
     12.00, 
     6, 
@@ -131,7 +131,7 @@ CALL AddCardToInventory(
     'Nidoking', 
     'Rare Holo', 
     'Grass', 
-    '11/102', 
+    '011/102', 
     'Good', 
     7.50, 
     10, 
@@ -144,7 +144,7 @@ CALL AddCardToInventory(
     'Ninetales', 
     'Rare Holo', 
     'Fire', 
-    '12/102', 
+    '012/102', 
     'Good', 
     8.50, 
     12, 
@@ -157,7 +157,7 @@ CALL AddCardToInventory(
     'Poliwrath', 
     'Rare Holo', 
     'Water', 
-    '13/102', 
+    '013/102', 
     'Good', 
     9.50, 
     10, 
@@ -170,7 +170,7 @@ CALL AddCardToInventory(
     'Raichu', 
     'Rare Holo', 
     'Lightning', 
-    '14/102', 
+    '014/102', 
     'Good', 
     10.00, 
     8, 
@@ -183,7 +183,7 @@ CALL AddCardToInventory(
     'Venusaur', 
     'Rare Holo', 
     'Grass', 
-    '15/102', 
+    '015/102', 
     'Good', 
     15.00, 
     5, 
@@ -196,7 +196,7 @@ CALL AddCardToInventory(
     'Zapdos', 
     'Rare Holo', 
     'Lightning', 
-    '16/102', 
+    '016/102', 
     'Good', 
     14.00, 
     6, 
@@ -209,7 +209,7 @@ CALL AddCardToInventory(
     'Beedrill', 
     'Rare', 
     'Grass', 
-    '17/102', 
+    '017/102', 
     'Good', 
     4.50, 
     10, 
@@ -222,7 +222,7 @@ CALL AddCardToInventory(
     'Dragonair', 
     'Rare', 
     'Colorless', 
-    '18/102', 
+    '018/102', 
     'Good', 
     5.50, 
     12, 
@@ -235,7 +235,7 @@ CALL AddCardToInventory(
     'Dugtrio', 
     'Rare', 
     'Fighting', 
-    '19/102', 
+    '019/102', 
     'Good', 
     4.00, 
     15, 
@@ -248,7 +248,7 @@ CALL AddCardToInventory(
     'Electabuzz', 
     'Rare', 
     'Lightning', 
-    '20/102', 
+    '020/102', 
     'Good', 
     3.50, 
     18, 
@@ -261,7 +261,7 @@ CALL AddCardToInventory(
     'Electrode', 
     'Rare', 
     'Lightning', 
-    '21/102', 
+    '021/102', 
     'Good', 
     5.00, 
     8, 
@@ -274,7 +274,7 @@ CALL AddCardToInventory(
     'Pidgeotto', 
     'Rare', 
     'Colorless', 
-    '22/102', 
+    '022/102', 
     'Good', 
     6.00, 
     10, 
@@ -287,7 +287,7 @@ CALL AddCardToInventory(
     'Arcanine', 
     'Uncommon', 
     'Fire', 
-    '23/102', 
+    '023/102', 
     'Good', 
     3.00, 
     10, 
@@ -300,7 +300,7 @@ CALL AddCardToInventory(
     'Charmeleon', 
     'Uncommon', 
     'Fire', 
-    '24/102', 
+    '024/102', 
     'Good', 
     2.50, 
     12, 
@@ -313,7 +313,7 @@ CALL AddCardToInventory(
     'Dewgong', 
     'Uncommon', 
     'Water', 
-    '25/102', 
+    '025/102', 
     'Good', 
     2.00, 
     15, 
@@ -326,7 +326,7 @@ CALL AddCardToInventory(
     'Dratini', 
     'Uncommon', 
     'Dragon', 
-    '26/102', 
+    '026/102', 
     'Good', 
     1.50, 
     20, 
@@ -339,7 +339,7 @@ CALL AddCardToInventory(
     'Farfetch\'d', 
     'Uncommon', 
     'Colorless', 
-    '27/102', 
+    '027/102', 
     'Good', 
     2.00, 
     18, 
@@ -352,7 +352,7 @@ CALL AddCardToInventory(
     'Growlithe', 
     'Uncommon', 
     'Fire', 
-    '28/102', 
+    '028/102', 
     'Good', 
     2.00, 
     15, 
@@ -365,11 +365,11 @@ CALL AddCardToInventory(
     'Haunter', 
     'Uncommon', 
     'Ghost', 
-    '29/102', 
+    '029/102', 
     'Good', 
     3.50, 
     12, 
-    'https://example.com/cards/haunter'
+    'https://images.pokemontcg.io/base1/29_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -378,11 +378,11 @@ CALL AddCardToInventory(
     'Ivysaur', 
     'Uncommon', 
     'Grass', 
-    '30/102', 
+    '030/102', 
     'Good', 
     2.50, 
     14, 
-    'https://example.com/cards/ivysaur'
+    'https://images.pokemontcg.io/base1/30_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -391,11 +391,11 @@ CALL AddCardToInventory(
     'Jynx', 
     'Uncommon', 
     'Psychic', 
-    '31/102', 
+    '031/102', 
     'Good', 
     3.00, 
     10, 
-    'https://example.com/cards/jynx'
+    'https://images.pokemontcg.io/base1/31_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -404,11 +404,11 @@ CALL AddCardToInventory(
     'Kadabra', 
     'Uncommon', 
     'Psychic', 
-    '32/102', 
+    '032/102', 
     'Good', 
     3.00, 
     15, 
-    'https://example.com/cards/kadabra'
+    'https://images.pokemontcg.io/base1/32_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -417,11 +417,11 @@ CALL AddCardToInventory(
     'Kakuna', 
     'Uncommon', 
     'Grass', 
-    '33/102', 
+    '033/102', 
     'Good', 
     1.50, 
     20, 
-    'https://example.com/cards/kakuna'
+    'https://images.pokemontcg.io/base1/33_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -430,11 +430,11 @@ CALL AddCardToInventory(
     'Machoke', 
     'Uncommon', 
     'Fighting', 
-    '34/102', 
+    '034/102', 
     'Good', 
     2.00, 
     15, 
-    'https://example.com/cards/machoke'
+    'https://images.pokemontcg.io/base1/34_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -443,11 +443,11 @@ CALL AddCardToInventory(
     'Magikarp', 
     'Uncommon', 
     'Water', 
-    '35/102', 
+    '035/102', 
     'Good', 
     1.00, 
     25, 
-    'https://example.com/cards/magikarp'
+    'https://images.pokemontcg.io/base1/35_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -456,11 +456,11 @@ CALL AddCardToInventory(
     'Magmar', 
     'Uncommon', 
     'Fire', 
-    '36/102', 
-    'Good', 
+    '036/102', 
     2.50, 
+    'Good', 
     18, 
-    'https://example.com/cards/magmar'
+    'https://images.pokemontcg.io/base1/36_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -469,11 +469,11 @@ CALL AddCardToInventory(
     'Nidorino', 
     'Uncommon', 
     'Poison', 
-    '37/102', 
+    '037/102', 
     'Good', 
     2.00, 
     20, 
-    'https://example.com/cards/nidorino'
+    'https://images.pokemontcg.io/base1/37_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -482,11 +482,11 @@ CALL AddCardToInventory(
     'Poliwhirl', 
     'Uncommon', 
     'Water', 
-    '38/102', 
+    '038/102', 
     'Good', 
     2.50, 
     15, 
-    'https://example.com/cards/poliwhirl'
+    'https://images.pokemontcg.io/base1/38_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -495,11 +495,11 @@ CALL AddCardToInventory(
     'Porygon', 
     'Uncommon', 
     'Colorless', 
-    '39/102', 
+    '039/102', 
     'Good', 
     2.00, 
     18, 
-    'https://example.com/cards/porygon'
+    'https://images.pokemontcg.io/base1/39_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -508,11 +508,11 @@ CALL AddCardToInventory(
     'Raticate', 
     'Uncommon', 
     'Normal', 
-    '40/102', 
+    '040/102', 
     'Good', 
     1.50, 
     20, 
-    'https://example.com/cards/raticate'
+    'https://images.pokemontcg.io/base1/40_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -521,11 +521,11 @@ CALL AddCardToInventory(
     'Seel', 
     'Uncommon', 
     'Water', 
-    '41/102', 
+    '041/102', 
     'Good', 
     2.00, 
     15, 
-    'https://example.com/cards/seel'
+    'https://images.pokemontcg.io/base1/41_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -534,11 +534,11 @@ CALL AddCardToInventory(
     'Wartortle', 
     'Uncommon', 
     'Water', 
-    '42/102', 
+    '042/102', 
     'Good', 
     3.00, 
     12, 
-    'https://example.com/cards/wartortle'
+    'https://images.pokemontcg.io/base1/42_hires.png'
 );
 -- common
 CALL AddCardToInventory(
@@ -547,11 +547,11 @@ CALL AddCardToInventory(
     'Abra', 
     'Psychic', 
     'Common', 
-    '43/102', 
+    '043/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/abra'
+    'https://images.pokemontcg.io/base1/43_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -560,11 +560,11 @@ CALL AddCardToInventory(
     'Bulbasaur', 
     'Grass', 
     'Common', 
-    '44/102', 
+    '044/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/bulbasaur'
+    'https://images.pokemontcg.io/base1/44_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -573,11 +573,11 @@ CALL AddCardToInventory(
     'Caterpie', 
     'Grass', 
     'Common', 
-    '45/102', 
+    '045/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/caterpie'
+    'https://images.pokemontcg.io/base1/45_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -586,11 +586,11 @@ CALL AddCardToInventory(
     'Charmander', 
     'Fire', 
     'Common', 
-    '46/102', 
+    '046/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/charmander'
+    'https://images.pokemontcg.io/base1/46_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -599,11 +599,11 @@ CALL AddCardToInventory(
     'Diglett', 
     'Fighting', 
     'Common', 
-    '47/102', 
+    '047/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/diglett'
+    'https://images.pokemontcg.io/base1/47_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -612,11 +612,11 @@ CALL AddCardToInventory(
     'Doduo', 
     'Colorless', 
     'Common', 
-    '48/102', 
+    '048/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/doduo'
+    'https://images.pokemontcg.io/base1/48_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -625,11 +625,11 @@ CALL AddCardToInventory(
     'Drowzee', 
     'Psychic', 
     'Common', 
-    '49/102', 
+    '049/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/drowzee'
+    'https://images.pokemontcg.io/base1/49_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -638,11 +638,11 @@ CALL AddCardToInventory(
     'Gastly', 
     'Psychic', 
     'Common', 
-    '50/102', 
+    '050/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/gastly'
+    'https://images.pokemontcg.io/base1/50_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -651,11 +651,11 @@ CALL AddCardToInventory(
     'Koffing', 
     'Grass', 
     'Common', 
-    '51/102', 
+    '051/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/koffing'
+    'https://images.pokemontcg.io/base1/51_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -664,11 +664,11 @@ CALL AddCardToInventory(
     'Machop', 
     'Fighting', 
     'Common', 
-    '52/102', 
+    '052/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/machop'
+    'https://images.pokemontcg.io/base1/52_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -677,11 +677,11 @@ CALL AddCardToInventory(
     'Magnemite', 
     'Electric', 
     'Common', 
-    '53/102', 
+    '053/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/magnemite'
+    'https://images.pokemontcg.io/base1/53_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -690,11 +690,11 @@ CALL AddCardToInventory(
     'Metapod', 
     'Grass', 
     'Common', 
-    '54/102', 
+    '054/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/metapod'
+    'https://images.pokemontcg.io/base1/54_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -703,11 +703,11 @@ CALL AddCardToInventory(
     'Nidoran♂', 
     'Grass', 
     'Common', 
-    '55/102', 
+    '055/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/nidoran-male'
+    'https://images.pokemontcg.io/base1/55_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -716,11 +716,11 @@ CALL AddCardToInventory(
     'Onix', 
     'Fighting', 
     'Common', 
-    '56/102', 
+    '056/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/onix'
+    'https://images.pokemontcg.io/base1/56_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -729,11 +729,11 @@ CALL AddCardToInventory(
     'Pidgey', 
     'Colorless', 
     'Common', 
-    '57/102', 
+    '057/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/pidgey'
+    'https://images.pokemontcg.io/base1/57_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -742,11 +742,11 @@ CALL AddCardToInventory(
     'Pikachu', 
     'Electric', 
     'Common', 
-    '58/102', 
+    '058/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/pikachu'
+    'https://images.pokemontcg.io/base1/58_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -755,11 +755,11 @@ CALL AddCardToInventory(
     'Poliwag', 
     'Water', 
     'Common', 
-    '59/102', 
+    '059/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/poliwag'
+    'https://images.pokemontcg.io/base1/59_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -768,11 +768,11 @@ CALL AddCardToInventory(
     'Ponyta', 
     'Fire', 
     'Common', 
-    '60/102', 
+    '060/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/ponyta'
+    'https://images.pokemontcg.io/base1/60_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -781,11 +781,11 @@ CALL AddCardToInventory(
     'Rattata', 
     'Colorless', 
     'Common', 
-    '61/102', 
+    '061/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/rattata'
+    'https://images.pokemontcg.io/base1/61_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -794,11 +794,11 @@ CALL AddCardToInventory(
     'Sandshrew', 
     'Fighting', 
     'Common', 
-    '62/102', 
+    '062/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/sandshrew'
+    'https://images.pokemontcg.io/base1/62_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -807,11 +807,11 @@ CALL AddCardToInventory(
     'Squirtle', 
     'Water', 
     'Common', 
-    '63/102', 
+    '063/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/squirtle'
+    'https://images.pokemontcg.io/base1/63_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -820,11 +820,11 @@ CALL AddCardToInventory(
     'Starmie', 
     'Water', 
     'Common', 
-    '64/102', 
+    '064/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/starmie'
+    'https://images.pokemontcg.io/base1/64_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -833,11 +833,11 @@ CALL AddCardToInventory(
     'Staryu', 
     'Water', 
     'Common', 
-    '65/102', 
+    '065/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/staryu'
+    'https://images.pokemontcg.io/base1/65_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -846,11 +846,11 @@ CALL AddCardToInventory(
     'Tangela', 
     'Grass', 
     'Common', 
-    '66/102', 
+    '066/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/tangela'
+    'https://images.pokemontcg.io/base1/66_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -859,11 +859,11 @@ CALL AddCardToInventory(
     'Voltorb', 
     'Electric', 
     'Common', 
-    '67/102', 
+    '067/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/voltorb'
+    'https://images.pokemontcg.io/base1/67_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -872,11 +872,11 @@ CALL AddCardToInventory(
     'Vulpix', 
     'Fire', 
     'Common', 
-    '68/102', 
+    '068/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/vulpix'
+    'https://images.pokemontcg.io/base1/68_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -885,11 +885,11 @@ CALL AddCardToInventory(
     'Weedle', 
     'Grass', 
     'Common', 
-    '69/102', 
+    '069/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/weedle'
+    'https://images.pokemontcg.io/base1/69_hires.png'
 );
 -- Trainer
 CALL AddCardToInventory(
@@ -898,11 +898,11 @@ CALL AddCardToInventory(
     'Clefairy Doll', 
     'Trainer', 
     'Rare', 
-    '70/102', 
+    '070/102', 
     'Good', 
     1.20, 
     25, 
-    'https://example.com/cards/clefairy-doll'
+    'https://images.pokemontcg.io/base1/70_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -911,11 +911,11 @@ CALL AddCardToInventory(
     'Computer Search', 
     'Trainer', 
     'Rare', 
-    '71/102', 
+    '071/102', 
     'Good', 
     2.00, 
     15, 
-    'https://example.com/cards/computer-search'
+    'https://images.pokemontcg.io/base1/71_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -924,11 +924,11 @@ CALL AddCardToInventory(
     'Devolution Spray', 
     'Trainer', 
     'Rare', 
-    '72/102', 
+    '072/102', 
     'Good', 
     1.50, 
     20, 
-    'https://example.com/cards/devolution-spray'
+    'https://images.pokemontcg.io/base1/72_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -937,11 +937,11 @@ CALL AddCardToInventory(
     'Imposter Professor Oak', 
     'Trainer', 
     'Rare', 
-    '73/102', 
+    '073/102', 
     'Good', 
     2.00, 
     15, 
-    'https://example.com/cards/imposter-professor-oak'
+    'https://images.pokemontcg.io/base1/73_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -950,11 +950,11 @@ CALL AddCardToInventory(
     'Item Finder', 
     'Trainer', 
     'Rare', 
-    '74/102', 
+    '074/102', 
     'Good', 
     1.80, 
     20, 
-    'https://example.com/cards/item-finder'
+    'https://images.pokemontcg.io/base1/74_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -963,11 +963,11 @@ CALL AddCardToInventory(
     'Lass', 
     'Trainer', 
     'Rare', 
-    '75/102', 
+    '075/102', 
     'Good', 
     1.50, 
     25, 
-    'https://example.com/cards/lass'
+    'https://images.pokemontcg.io/base1/75_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -976,11 +976,11 @@ CALL AddCardToInventory(
     'Pokémon Breeder', 
     'Trainer', 
     'Rare', 
-    '76/102', 
+    '076/102', 
     'Good', 
     2.00, 
     15, 
-    'https://example.com/cards/pokemon-breeder'
+    'https://images.pokemontcg.io/base1/76_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -989,11 +989,11 @@ CALL AddCardToInventory(
     'Pokémon Trader', 
     'Trainer', 
     'Rare', 
-    '77/102', 
+    '077/102', 
     'Good', 
     1.80, 
     20, 
-    'https://example.com/cards/pokemon-trader'
+    'https://images.pokemontcg.io/base1/77_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1002,11 +1002,11 @@ CALL AddCardToInventory(
     'Scoop Up', 
     'Trainer', 
     'Rare', 
-    '78/102', 
+    '078/102', 
     'Good', 
     1.50, 
     25, 
-    'https://example.com/cards/scoop-up'
+    'https://images.pokemontcg.io/base1/78_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1015,11 +1015,11 @@ CALL AddCardToInventory(
     'Super Energy Removal', 
     'Trainer', 
     'Rare', 
-    '79/102', 
+    '079/102', 
     'Good', 
     2.50, 
     10, 
-    'https://example.com/cards/super-energy-removal'
+    'https://images.pokemontcg.io/base1/79_hires.png'
 );
 -- Uncommon
 CALL AddCardToInventory(
@@ -1028,11 +1028,11 @@ CALL AddCardToInventory(
     'Defender', 
     'Trainer', 
     'Uncommon', 
-    '80/102', 
+    '080/102', 
     'Good', 
     1.00, 
     30, 
-    'https://example.com/cards/defender'
+    'https://images.pokemontcg.io/base1/80_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1041,11 +1041,11 @@ CALL AddCardToInventory(
     'Energy Retrieval', 
     'Trainer', 
     'Uncommon', 
-    '81/102', 
+    '081/102', 
     'Good', 
     1.20, 
     25, 
-    'https://example.com/cards/energy-retrieval'
+    'https://images.pokemontcg.io/base1/81_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1054,11 +1054,11 @@ CALL AddCardToInventory(
     'Full Heal', 
     'Trainer', 
     'Uncommon', 
-    '82/102', 
+    '082/102', 
     'Good', 
     1.00, 
     25, 
-    'https://example.com/cards/full-heal'
+    'https://images.pokemontcg.io/base1/82_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1067,11 +1067,11 @@ CALL AddCardToInventory(
     'Maintenance', 
     'Trainer', 
     'Uncommon', 
-    '83/102', 
+    '083/102', 
     'Good', 
     1.00, 
     25, 
-    'https://example.com/cards/maintenance'
+    'https://images.pokemontcg.io/base1/83_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1080,11 +1080,11 @@ CALL AddCardToInventory(
     'PlusPower', 
     'Trainer', 
     'Uncommon', 
-    '84/102', 
+    '084/102', 
     'Good', 
     1.10, 
     25, 
-    'https://example.com/cards/pluspower'
+    'https://images.pokemontcg.io/base1/84_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1093,11 +1093,11 @@ CALL AddCardToInventory(
     'Pokémon Center', 
     'Trainer', 
     'Uncommon', 
-    '85/102', 
+    '085/102', 
     'Good', 
     1.30, 
     20, 
-    'https://example.com/cards/pokemon-center'
+    'https://images.pokemontcg.io/base1/85_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1106,11 +1106,11 @@ CALL AddCardToInventory(
     'Pokémon Flute', 
     'Trainer', 
     'Uncommon', 
-    '86/102', 
+    '086/102', 
     'Good', 
     1.20, 
     25, 
-    'https://example.com/cards/pokemon-flute'
+    'https://images.pokemontcg.io/base1/86_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1119,11 +1119,11 @@ CALL AddCardToInventory(
     'Pokédex', 
     'Trainer', 
     'Uncommon', 
-    '87/102', 
+    '087/102', 
     'Good', 
     1.50, 
     20, 
-    'https://example.com/cards/pokedex'
+    'https://images.pokemontcg.io/base1/87_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1132,11 +1132,11 @@ CALL AddCardToInventory(
     'Professor Oak', 
     'Trainer', 
     'Uncommon', 
-    '88/102', 
+    '088/102', 
     'Good', 
     1.50, 
     20, 
-    'https://example.com/cards/professor-oak'
+    'https://images.pokemontcg.io/base1/88_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1145,11 +1145,11 @@ CALL AddCardToInventory(
     'Revive', 
     'Trainer', 
     'Uncommon', 
-    '89/102', 
+    '089/102', 
     'Good', 
     1.00, 
     25, 
-    'https://example.com/cards/revive'
+    'https://images.pokemontcg.io/base1/89_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1158,11 +1158,11 @@ CALL AddCardToInventory(
     'Super Potion', 
     'Trainer', 
     'Uncommon', 
-    '90/102', 
+    '090/102', 
     'Good', 
     1.00, 
     30, 
-    'https://example.com/cards/super-potion'
+    'https://images.pokemontcg.io/base1/90_hires.png'
 );
 -- Common
 CALL AddCardToInventory(
@@ -1171,11 +1171,11 @@ CALL AddCardToInventory(
     'Bill', 
     'Trainer', 
     'Common', 
-    '91/102', 
+    '091/102', 
     'Good', 
     0.80, 
     35, 
-    'https://example.com/cards/bill'
+    'https://images.pokemontcg.io/base1/91_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1184,11 +1184,11 @@ CALL AddCardToInventory(
     'Energy Removal', 
     'Trainer', 
     'Common', 
-    '92/102', 
+    '092/102', 
     'Good', 
     0.90, 
     30, 
-    'https://example.com/cards/energy-removal'
+    'https://images.pokemontcg.io/base1/92_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1197,11 +1197,11 @@ CALL AddCardToInventory(
     'Gust of Wind', 
     'Trainer', 
     'Common', 
-    '93/102', 
+    '093/102', 
     'Good', 
     1.00, 
     25, 
-    'https://example.com/cards/gust-of-wind'
+    'https://images.pokemontcg.io/base1/93_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1210,11 +1210,11 @@ CALL AddCardToInventory(
     'Potion', 
     'Trainer', 
     'Common', 
-    '94/102', 
+    '094/102', 
     'Good', 
     0.80, 
     35, 
-    'https://example.com/cards/potion'
+    'https://images.pokemontcg.io/base1/94_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1223,11 +1223,11 @@ CALL AddCardToInventory(
     'Switch', 
     'Trainer', 
     'Common', 
-    '95/102', 
+    '095/102', 
     'Good', 
     0.90, 
     30, 
-    'https://example.com/cards/switch'
+    'https://images.pokemontcg.io/base1/95_hires.png'
 );
 -- Energy
 CALL AddCardToInventory(
@@ -1236,11 +1236,11 @@ CALL AddCardToInventory(
     'Double Colorless Energy', 
     'Energy', 
     'Uncommon', 
-    '96/102', 
+    '096/102', 
     'Good', 
     1.50, 
     25, 
-    'https://example.com/cards/double-colorless-energy'
+    'https://images.pokemontcg.io/base1/96_hires.png'
 );
 CALL AddCardToInventory(
     'Base Set', 
@@ -1248,11 +1248,11 @@ CALL AddCardToInventory(
     'Fighting Energy', 
     'Energy', 
     'Common', 
-    '97/102', 
+    '097/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/fighting-energy'
+    'https://images.pokemontcg.io/base1/97_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1261,11 +1261,11 @@ CALL AddCardToInventory(
     'Fire Energy', 
     'Energy', 
     'Common', 
-    '98/102', 
+    '098/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/fire-energy'
+    'https://images.pokemontcg.io/base1/98_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1274,11 +1274,11 @@ CALL AddCardToInventory(
     'Grass Energy', 
     'Energy', 
     'Common', 
-    '99/102', 
+    '099/102', 
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/grass-energy'
+    'https://images.pokemontcg.io/base1/99_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1291,7 +1291,7 @@ CALL AddCardToInventory(
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/lightning-energy'
+    'https://images.pokemontcg.io/base1/100_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1304,7 +1304,7 @@ CALL AddCardToInventory(
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/psychic-energy'
+    'https://images.pokemontcg.io/base1/101_hires.png'
 );
 
 CALL AddCardToInventory(
@@ -1317,5 +1317,5 @@ CALL AddCardToInventory(
     'Good', 
     0.50, 
     40, 
-    'https://example.com/cards/water-energy'
+    'https://images.pokemontcg.io/base1/102_hires.png'
 );
