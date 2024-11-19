@@ -1,0 +1,22 @@
+.about-section h2, .about-section h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .about-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-section ul li {
+    background-color: #f0f8ff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section ul li strong {
+    color: #007bff;
+  }
+  

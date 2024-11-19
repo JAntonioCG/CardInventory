@@ -20,13 +20,7 @@
     public function obtenerCartasPorCategoria($category) {
       return $this->cardRepository->obtenerCartasPorCategoria($category);  // Devolverá un array de cartas
     }    
-    public function obtenerCartasPorExpancion($Expancion) {
-      return $this->cardRepository->obtenerCartasPorExpancion($Expancion);  // Devolverá un array de cartas
+    public function obtenerCartasPorSubexpansion($subexpansion_id) {
+      return $this->cardRepository->obtenerCartasPorSubexpansion($subexpansion_id);  // Devolverá un array de cartas
     } 
-    public function obtenerCartasPorExpanciont ($Expancion) {
-      return $this->cardRepository->obtenerCartasPorExpancion($Expancion);  // Devolverá un array de cartas
-    } 
-    public function obtenerCartasPorExpancions ($Expancion) {
-      return $this->cardRepository->obtenerCartasPorExpancion($Expancion);  // Devolverá un array de cartas
-    }  
   }

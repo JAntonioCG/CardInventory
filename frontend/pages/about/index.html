@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+      /* Fondo animado usando un GIF de Pokémon */
+      background-image: url('./images/YNXo.gif');
+      background-size: cover;
+      background-position: center;
+      animation: backgroundAnimation 20s infinite linear;
+    }
+
+    /* Animación del fondo para darle un movimiento */
+    @keyframes backgroundAnimation {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 100% 100%;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    header {
+      background: #333; /* Fondo semitransparente para el encabezado */
+      
+      background-size: cover;
+      height: 100px;
+      text-align: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0); /* Sombra sutil para el header */
+      margin-bottom: 40px;
+    }
+    header h1 {
+      background: rgba(0, 0, 0, 0);
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 36px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+    }
+    .about-section {
+      margin-bottom: 40px;
+    }
+    .about-section h2 {
+      font-size: 28px;
+      color: #007bff; /* Azul similar al esquema principal */
+    }
+    .about-section p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+    }
+    .product-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      flex: 1 1 calc(33.333% - 20px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+    .product-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .product-card p {
+      font-size: 18px;
+      color: #007bff; /* Azul principal */
+      font-weight: bold;
+    }
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    .social-button img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .social-button img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    }
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background: #343a40; /* Oscuro similar al navbar */
+      color: white;
+      margin-top: 40px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* Estilo del botón con colores principales */
+    .back-button {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 12px 30px;
+      background-color: #007bff; /* Azul principal */
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #0056b3; /* Azul más oscuro */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+    .back-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>About - Pokémon Card Inventory</h1>
+</header>
+
+<div class="container">
+  <section class="about-section">
+    <h2>Welcome to Pokémon Card Inventory</h2>
+    <p>
+      Immerse yourself in the exciting world of Pokémon cards with our deck designed for collectors of all levels. Organize your collection in a simple and intuitive way, discover the latest news on the market, and connect with a passionate community.
+    </p>
+  
+    <h3>What do we offer?</h3>
+    <ul>
+      <li><strong>Complete Catalog:</strong> Explore an extensive catalog of cards from all expansions, from classic editions to the most recent.</li>
+      <li><strong>Custom Tools:</strong> Create wish lists, value your cards and follow market prices to make informed decisions.</li>
+      <li><strong>Active Community:</strong> Join our community and share your passion for Pokémon with other collectors.</li>
+      <li><strong>Educational Resources:</strong> Learn everything you need to know about the world of Pokémon cards, from their history to playing strategies.</li>
+    </ul>
+  
+    <h3>Why choose us?</h3>
+    <ul>
+      <li><strong>Protect your investment:</strong> Make smart decisions thanks to our card valuation tool and historical price data.</li>
+      <li><strong>Discover hidden treasures:</strong> Find the cards you are looking for with our powerful search tools.</li>
+      <li><strong>Be part of something big:</strong> Join our community and participate in exclusive events and contests.</li>
+    </ul>
+  
+    <p><strong>Start building your dream collection today!</strong></p>
+  </section>
+  
+  <!-- Botón para volver al inicio -->
+  <a href="../../" class="back-button">Back to Home</a>
+
+  <!-- Botones de redes sociales con imágenes -->
+  <div class="social-buttons">
+    <a href="https://www.facebook.com/PokemonOficialLatAm" target="_blank" class="social-button">
+      <img src="./images/face.png" alt="Facebook">
+    </a>
+    <a href="https://www.youtube.com/PokemonLATAM" target="_blank" class="social-button">
+      <img src="./images/youtube.png" alt="YouTube">
+    </a>
+    <a href="https://x.com/PokemonLATAM" target="_blank" class="social-button">
+      <img src="./images/x.png" alt="X">
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 Pokémon Card Inventory. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
