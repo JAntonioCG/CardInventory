@@ -336,7 +336,7 @@ CALL AddCardToInventory(
 CALL AddCardToInventory(
     'Base Set', 
     'Base Set', 
-    'Farfetch\'d', 
+    'Farfetch"d', 
     'Uncommon', 
     'Colorless', 
     '027/102', 
