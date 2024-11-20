@@ -1,20 +1,15 @@
 const apiUrl = 'http://localhost:8888/cardinventory/src/index.php';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const searchForm = document.querySelector('form');
   const searchInput = document.querySelector('input[type="search"]');
+  const expansionsContainer = document.getElementById('expansions-container');
 
   const categories = [
-    'electric', 'water', 'steel', 'bug', 'dragon', 'ghost', 
-    'fire', 'fairy', 'ice', 'fighting', 'normal', 'grass', 
-    'psychic', 'rock', 'dark', 'ground', 'poison', 'flying', 
+    'electric', 'water', 'steel', 'bug', 'dragon', 'ghost',
+    'fire', 'fairy', 'ice', 'fighting', 'normal', 'grass',
+    'psychic', 'rock', 'dark', 'ground', 'poison', 'flying',
     'colorless energy', 'common'
-  ];
-
-  const expansions = [
-    'base set', 'neo genesis', 'legendary collection', 'expedition base set', 'ruby & sapphire', 
-    'diamond & pearl', 'platinum', 'geartgold & soulsilver', 'black & white',
-    'kalos starter set', 'sun & moon', 'sword & shield', 'scarlet & violet'
   ];
 
   const determineSearchType = (query) => {
@@ -24,13 +19,69 @@ document.addEventListener('DOMContentLoaded', () => {
       return { type: 'category', endpoint: `${apiUrl}/cartas/category`, payload: { category: query } };
     }
 
-    if (expansions.includes(lowerQuery)) {
-      return { type: 'expansion', endpoint: `${apiUrl}/cartas/expansion`, payload: { name: query } };
-    }
-
     return { type: 'name', endpoint: `${apiUrl}/cartas/nombre`, payload: { name: query } };
   };
 
+  // Función para obtener expansiones desde la API
+  const fetchExpansions = async () => {
+    try {
+      const response = await fetch(`${apiUrl}/expansiones`);
+      if (response.ok) {
+        const expansions = await response.json();
+        return expansions;
+      } else {
+        console.error('Error fetching expansions:', response.status);
+        return [];
+      }
+    } catch (error) {
+      console.error('Error fetching expansions:', error);
+      return [];
+    }
+  };
+
+  // Renderizar expansiones como botones
+  const renderExpansionButtons = (expansions) => {
+    expansionsContainer.innerHTML = ''; // Limpiar contenedor
+    expansions.forEach((expansion) => {
+      const button = document.createElement('button');
+      button.className = 'btn btn-outline-primary col-auto mx-2';
+      button.textContent = expansion.name; // Supongamos que "name" es el campo con el nombre de la expansión
+      button.addEventListener('click', () => {
+        handleExpansionClick(expansion.name);
+      });
+      expansionsContainer.appendChild(button);
+    });
+  };
+
+  // Manejo del clic en un botón de expansión
+  const handleExpansionClick = async (expansionName) => {
+    try {
+      const response = await fetch(`${apiUrl}/cartas/expansion`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name: expansionName }),
+      });
+
+      if (response.ok) {
+        const cards = await response.json();
+
+        if (Array.isArray(cards) && cards.length > 0) {
+          localStorage.setItem('cards', JSON.stringify(cards)); // Guardar las cartas en localStorage
+          window.location.href = 'pages/search/index.html'; // Redirigir a la página de búsqueda
+        } else {
+          alert('No se encontraron cartas para esta expansión.');
+        }
+      } else {
+        console.error('Error fetching cards.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  // Manejo del formulario de búsqueda
   searchForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const searchQuery = searchInput.value.trim();
@@ -54,14 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (response.ok) {
         const cards = await response.json();
 
-        // Verificamos si se encontraron cartas
         if (Array.isArray(cards) && cards.length > 0) {
-          console.log('@@@ Cartas =>', cards);
-          // Aquí redirigimos después de mostrar las cartas
           localStorage.setItem('cards', JSON.stringify(cards));
-          window.location.href = 'pages/search/index.html';  // Redirigir a la carpeta "search"
+          window.location.href = 'pages/search/index.html'; // Redirigir a la página de búsqueda
         } else {
-          console.log('No se encontraron cartas.');
           alert('No se encontraron cartas.');
         }
       } else {
@@ -71,4 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error:', error);
     }
   });
+
+  // Inicializar la carga de expansiones
+  const expansions = await fetchExpansions();
+  renderExpansionButtons(expansions);
 });

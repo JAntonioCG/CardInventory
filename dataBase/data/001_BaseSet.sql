@@ -457,8 +457,8 @@ CALL AddCardToInventory(
     'Uncommon', 
     'Fire', 
     '036/102', 
-    2.50, 
     'Good', 
+    2.50, 
     18, 
     'https://images.pokemontcg.io/base1/36_hires.png'
 );

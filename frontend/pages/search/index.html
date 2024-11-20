@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar (igual que en el archivo index.html) -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <img src="https://archives.bulbagarden.net/media/upload/thumb/e/e8/Pok%C3%A9mon_World_Championships_logo.png/117px-Pok%C3%A9mon_World_Championships_logo.png">
+      <img src="https://archives.bulbagarden.net/media/upload/thumb/e/e8/Pok%C3%A9mon_World_Championships_logo.png/117px-Pok%C3%A9mon_World_Championships_logo.png" alt="Logo">
       <h1>ㅤ</h1>
       <a class="navbar-brand" href="../../">Pokémon Card Inventory</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,13 +23,13 @@
             <a class="nav-link" href="../../">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/categories/index.html">Categories</a>
+            <a class="nav-link" href="../categories/index.html">Categories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/search/index.html">Search</a>
+            <a class="nav-link" href="../search/index.html">Search</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/about/index.html">About</a>
+            <a class="nav-link" href="../about/index.html">About</a>
           </li>
         </ul>
       </div>
@@ -52,38 +52,42 @@
   </footer>
   
   <script>
-    // Cargar las cartas desde localStorage
+    // Este script carga las cartas desde localStorage al cargar la página
     window.addEventListener('DOMContentLoaded', () => {
-      const cards = JSON.parse(localStorage.getItem('cards'));
+      const cards = JSON.parse(localStorage.getItem('cards')); // Recuperar datos guardados por main.js
+
+      const cardsContainer = document.getElementById('cards-container');
 
       if (cards && Array.isArray(cards) && cards.length > 0) {
-        const cardsContainer = document.getElementById('cards-container');
-        
+        // Iterar y renderizar las cartas como tarjetas
         cards.forEach(card => {
           const cardElement = document.createElement('div');
           cardElement.classList.add('col-md-3', 'mb-4');
 
           cardElement.innerHTML = `
             <div class="card">
-              <img src="${card.CardUrl}" class="card-img-top" alt="Card Image">
+              <img src="${card.CardUrl}" class="card-img-top" alt="${card.CardName}">
               <div class="card-body">
                 <h5 class="card-title">${card.CardName}</h5>
                 <p class="card-text">Expansion: ${card.Expansion}</p>
                 <p class="card-text">Category: ${card.Category}</p>
                 <p class="card-text">Rarity: ${card.Rarity}</p>
                 <p class="card-text">Card Number: ${card.CardNumber}</p>
+                <p class="card-text">Stock: ${card.Stock}</p>
+                <p class="card-text">Condition: ${card.Conditions}</p>
+                <p class="card-text">Price: $${card.Price}</p>
               </div>
             </div>
           `;
           cardsContainer.appendChild(cardElement);
         });
       } else {
-        const cardsContainer = document.getElementById('cards-container');
-        cardsContainer.innerHTML = '<p>No results found.</p>';
+        // Si no hay resultados
+        cardsContainer.innerHTML = '<p class="text-center">No results found.</p>';
       }
     });
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
 </html>

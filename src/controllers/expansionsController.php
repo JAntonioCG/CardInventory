@@ -9,6 +9,10 @@
       $this->expansionsRepository = new expansionsRepository();
     }
     
+    public function obtenerExpansiones() {
+      return $this->expansionsRepository->obtenerExpansiones(); // Devolverá un array de cartas
+    }
+
     public function obtenerCartasPorExpansion ($name) {
       return $this->expansionsRepository->obtenerCartasPorExpansion($name);  // Devolverá un array de cartas
     }  
