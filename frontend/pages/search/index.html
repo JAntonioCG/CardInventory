@@ -36,11 +36,20 @@
     </div>
   </nav>
 
-  <!-- Search Results Section -->
   <section class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center">Search Results</h2>
-      <div class="row mt-4" id="cards-container">
+      <!-- Contenedor para la lista desplegable -->
+      <div class="row mt-4 mb-3">
+        <div class="col-12">
+          <label for="subexpansion-filter" class="form-label">Filter by Subexpansion:</label>
+          <select id="subexpansion-filter" class="form-select">
+            <option value="all">All Subexpansions</option>
+          </select>
+        </div>
+      </div>
+      <!-- Contenedor para las cartas -->
+      <div class="row" id="cards-container">
         <!-- Las cartas encontradas se mostrarán aquí -->
       </div>
     </div>
@@ -52,40 +61,71 @@
   </footer>
   
   <script>
-    // Este script carga las cartas desde localStorage al cargar la página
-    window.addEventListener('DOMContentLoaded', () => {
-      const cards = JSON.parse(localStorage.getItem('cards')); // Recuperar datos guardados por main.js
+  window.addEventListener('DOMContentLoaded', () => {
+  const cards = JSON.parse(localStorage.getItem('cards')) || []; // Recuperar cartas
+  const cardsContainer = document.getElementById('cards-container');
+  const subexpansionFilter = document.getElementById('subexpansion-filter');
 
-      const cardsContainer = document.getElementById('cards-container');
+  // Función para renderizar cartas
+  const renderCards = (filteredCards) => {
+    cardsContainer.innerHTML = ''; // Limpiar contenedor
+    if (filteredCards.length > 0) {
+      filteredCards.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('col-md-3', 'mb-4');
 
-      if (cards && Array.isArray(cards) && cards.length > 0) {
-        // Iterar y renderizar las cartas como tarjetas
-        cards.forEach(card => {
-          const cardElement = document.createElement('div');
-          cardElement.classList.add('col-md-3', 'mb-4');
-
-          cardElement.innerHTML = `
-            <div class="card">
-              <img src="${card.CardUrl}" class="card-img-top" alt="${card.CardName}">
-              <div class="card-body">
-                <h5 class="card-title">${card.CardName}</h5>
-                <p class="card-text">Expansion: ${card.Expansion}</p>
-                <p class="card-text">Category: ${card.Category}</p>
-                <p class="card-text">Rarity: ${card.Rarity}</p>
-                <p class="card-text">Card Number: ${card.CardNumber}</p>
-                <p class="card-text">Stock: ${card.Stock}</p>
-                <p class="card-text">Condition: ${card.Conditions}</p>
-                <p class="card-text">Price: $${card.Price}</p>
-              </div>
+        cardElement.innerHTML = `
+          <div class="card">
+            <img src="${card.CardUrl}" class="card-img-top" alt="${card.CardName}">
+            <div class="card-body">
+              <h5 class="card-title">${card.CardName}</h5>
+              <p class="card-text">Expansion: ${card.Expansion}</p>
+              <p class="card-text">Subexpansion: ${card.SubExpansion}</p>
+              <p class="card-text">Category: ${card.Category}</p>
+              <p class="card-text">Rarity: ${card.Rarity}</p>
+              <p class="card-text">Card Number: ${card.CardNumber}</p>
+              <p class="card-text">Stock: ${card.Stock}</p>
+              <p class="card-text">Condition: ${card.Conditions}</p>
+              <p class="card-text">Price: $${card.Price}</p>
             </div>
-          `;
-          cardsContainer.appendChild(cardElement);
-        });
-      } else {
-        // Si no hay resultados
-        cardsContainer.innerHTML = '<p class="text-center">No results found.</p>';
-      }
+          </div>
+        `;
+        cardsContainer.appendChild(cardElement);
+      });
+    } else {
+      cardsContainer.innerHTML = '<p class="text-center">No results found.</p>';
+    }
+  };
+
+  // Función para llenar la lista desplegable de subexpansiones
+  const populateSubexpansionFilter = (cards) => {
+    const subexpansions = [...new Set(cards.map(card => card.SubExpansion))];
+    subexpansionFilter.innerHTML = '<option value="all">All Subexpansions</option>';
+    subexpansions.forEach(subexpansion => {
+      const option = document.createElement('option');
+      option.value = subexpansion;
+      option.textContent = subexpansion;
+      subexpansionFilter.appendChild(option);
     });
+  };
+
+  // Manejar el cambio en la lista desplegable
+  subexpansionFilter.addEventListener('change', () => {
+    const selectedSubexpansion = subexpansionFilter.value;
+    const filteredCards = selectedSubexpansion === 'all'
+      ? cards
+      : cards.filter(card => card.SubExpansion === selectedSubexpansion);
+    renderCards(filteredCards);
+  });
+
+  // Inicializar la página
+  if (cards.length > 0) {
+    populateSubexpansionFilter(cards);
+    renderCards(cards);
+  } else {
+    cardsContainer.innerHTML = '<p class="text-center">No results found.</p>';
+  }
+});
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>

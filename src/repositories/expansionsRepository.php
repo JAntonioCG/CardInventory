@@ -11,7 +11,7 @@ class expansionsRepository implements IExpansions {
 	}
 
     public function obtenerExpansiones() {
-        $sql = "SELECT name FROM expansions";
+        $sql = "SELECT name FROM expansions ORDER BY name DESC;";
         $resultado = $this->conn->prepare($sql);
         $resultado->execute();
         return $resultado->fetchAll(PDO::FETCH_ASSOC);
