@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search Results - CardInventory</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/frontend/styles.css">
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <img src="https://archives.bulbagarden.net/media/upload/thumb/e/e8/Pok%C3%A9mon_World_Championships_logo.png/117px-Pok%C3%A9mon_World_Championships_logo.png" alt="Logo">
-      <h1>ㅤ</h1>
-      <a class="navbar-brand" href="../../">Pokémon Card Inventory</a>
+      <a class="navbar-brand ms-4" href="../../">Pokémon Card Inventory</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,7 +25,7 @@
             <a class="nav-link" href="../NewExpansion/">New Expansion</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../NewSubExpansion/">New Subxpansion</a>
+            <a class="nav-link" href="../NewSubExpansion/">New SubExpansion</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../about/index.html">About</a>
@@ -38,6 +37,11 @@
 
   <section class="py-5 bg-light">
     <div class="container">
+      <div id="loading-spinner" class="justify-content-center align-items-center" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8); z-index: 1000;">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>  
       <h2 class="text-center">Search Results</h2>
       <!-- Contenedor para la lista desplegable -->
       <div class="row mt-4 mb-3">
@@ -47,13 +51,21 @@
             <option value="all">All Subexpansions</option>
           </select>
         </div>
-      </div>
+      </div>        
       <!-- Contenedor para las cartas -->
       <div class="row" id="cards-container">
         <!-- Las cartas encontradas se mostrarán aquí -->
       </div>
+      <!-- Contenedor para botones de paginación -->
+      <div class="row mt-4 mb-4">
+        <div class="col-12 text-center" id="pagination-controls">
+          <!-- Los botones de paginación se generarán aquí -->
+        </div>
+      </div>
     </div>
   </section>
+
+
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-4">
@@ -61,73 +73,196 @@
   </footer>
   
   <script>
-  window.addEventListener('DOMContentLoaded', () => {
-  const cards = JSON.parse(localStorage.getItem('cards')) || []; // Recuperar cartas
-  const cardsContainer = document.getElementById('cards-container');
-  const subexpansionFilter = document.getElementById('subexpansion-filter');
+    window.addEventListener('DOMContentLoaded', () => {
+    const cards = JSON.parse(localStorage.getItem('cards')) || []; // Recuperar cartas
+    const cardsContainer = document.getElementById('cards-container');
+    const subexpansionFilter = document.getElementById('subexpansion-filter');
+    const paginationControls = document.getElementById('pagination-controls'); // Nuevo contenedor para paginación
+    let currentPage = 1; // Página actual
+    const cardsPerPage = 20; // Número de cartas por página
 
-  // Función para renderizar cartas
-  const renderCards = (filteredCards) => {
-    cardsContainer.innerHTML = ''; // Limpiar contenedor
-    if (filteredCards.length > 0) {
-      filteredCards.forEach(card => {
-        const cardElement = document.createElement('div');
-        cardElement.classList.add('col-md-3', 'mb-4');
+    // Función para calcular el índice de inicio y fin para una página
+    const getPaginationBounds = () => {
+      const start = (currentPage - 1) * cardsPerPage;
+      const end = start + cardsPerPage;
+      return [start, end];
+    };
 
-        cardElement.innerHTML = `
-          <div class="card">
-            <img src="${card.CardUrl}" class="card-img-top" alt="${card.CardName}">
-            <div class="card-body">
-              <h5 class="card-title">${card.CardName}</h5>
-              <p class="card-text">Expansion: ${card.Expansion}</p>
-              <p class="card-text">Subexpansion: ${card.SubExpansion}</p>
-              <p class="card-text">Category: ${card.Category}</p>
-              <p class="card-text">Rarity: ${card.Rarity}</p>
-              <p class="card-text">Card Number: ${card.CardNumber}</p>
-              <p class="card-text">Stock: ${card.Stock}</p>
-              <p class="card-text">Condition: ${card.Conditions}</p>
-              <p class="card-text">Price: $${card.Price}</p>
+    const showSpinner = () => {
+      document.getElementById('loading-spinner').style.display = 'fixed';
+    };
+
+    const hideSpinner = () => {
+      document.getElementById('loading-spinner').style.display = 'none';
+    };
+
+    const renderCards = (filteredCards) => {
+      cardsContainer.innerHTML = ''; // Limpiar contenedor
+      const [start, end] = getPaginationBounds();
+      const paginatedCards = filteredCards.slice(start, end);
+
+      const loadingSpinner = document.getElementById('loading-spinner'); // Spinner de carga
+      loadingSpinner.style.display = 'flex'; // Mostrar el spinner antes de cargar las imágenes
+
+      let imagesLoaded = 0; // Contador de imágenes cargadas
+      const totalImages = paginatedCards.length; // Total de imágenes a cargar
+
+      if (totalImages > 0) {
+        paginatedCards.forEach(card => {
+          const cardElement = document.createElement('div');
+          cardElement.classList.add('col-md-3', 'mb-4');
+
+          const img = document.createElement('img');
+          img.src = card.CardUrl;
+          img.classList.add('card-img-top');
+          img.alt = card.CardName;
+
+          // Manejar evento 'load' de cada imagen
+          img.onload = () => {
+            imagesLoaded++;
+            if (imagesLoaded === totalImages) {
+              loadingSpinner.style.display = 'none'; // Ocultar el spinner cuando todas las imágenes estén cargadas
+            }
+          };
+
+          img.onerror = () => {
+            imagesLoaded++; // Incrementar contador aunque la imagen falle
+            if (imagesLoaded === totalImages) {
+              loadingSpinner.style.display = 'none'; // Ocultar el spinner
+            }
+          };
+
+          cardElement.innerHTML = `
+            <div class="card">
+              ${img.outerHTML}
+              <div class="card-body">
+                <h5 class="card-title">${card.CardName}</h5>
+                <p class="card-text">Expansion: ${card.Expansion}</p>
+                <p class="card-text">Subexpansion: ${card.SubExpansion}</p>
+                <p class="card-text">Category: ${card.Category}</p>
+                <p class="card-text">Rarity: ${card.Rarity}</p>
+                <p class="card-text">Card Number: ${card.CardNumber}</p>
+                <p class="card-text">Stock: ${card.Stock}</p>
+                <p class="card-text">Condition: ${card.Conditions}</p>
+                <p class="card-text">Price: $${card.Price}</p>
+              </div>
             </div>
-          </div>
-        `;
-        cardsContainer.appendChild(cardElement);
+          `;
+          cardsContainer.appendChild(cardElement);
+        });
+      } else {
+        cardsContainer.innerHTML = '<p class="text-center">No results found.</p>';
+        loadingSpinner.style.display = 'none'; // Ocultar el spinner si no hay resultados
+      }
+
+      // Fallback para ocultar el spinner en caso de errores
+      setTimeout(() => {
+        if (loadingSpinner.style.display === 'flex') {
+          loadingSpinner.style.display = 'none';
+        }
+      }, 5000); // Tiempo máximo de espera para ocultar el spinner
+
+      updatePaginationControls(filteredCards.length);
+    };
+
+    const updatePaginationControls = (totalCards) => {
+      paginationControls.innerHTML = '';
+      const totalPages = Math.ceil(totalCards / cardsPerPage);
+
+      if (totalPages > 1) {
+        const prevButton = document.createElement('button');
+        prevButton.textContent = 'Previous';
+        prevButton.classList.add('btn', 'btn-secondary', 'me-2');
+        prevButton.disabled = currentPage === 1;
+        prevButton.addEventListener('click', () => {
+          if (currentPage > 1) {
+            currentPage--;
+            renderCards(getFilteredCards());
+            scrollToTop(); // Desplazar hacia arriba
+          }
+        });
+        paginationControls.appendChild(prevButton);
+
+        const nextButton = document.createElement('button');
+        nextButton.textContent = 'Next';
+        nextButton.classList.add('btn', 'btn-secondary');
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.addEventListener('click', () => {
+          if (currentPage < totalPages) {
+            currentPage++;
+            renderCards(getFilteredCards());
+            scrollToTop(); // Desplazar hacia arriba
+          }
+        });
+        paginationControls.appendChild(nextButton);
+      }
+    };
+
+
+    // Función para desplazarse al inicio de la sección de cartas
+    const scrollToTop = () => {
+      const section = document.querySelector('section'); // Seleccionar la sección de resultados
+      section.scrollIntoView({ behavior: 'smooth' }); // Desplazar con efecto suave
+    };
+
+
+    // Obtener cartas filtradas según la subexpansión seleccionada
+    const getFilteredCards = () => {
+      const selectedSubexpansion = subexpansionFilter.value;
+      return selectedSubexpansion === 'all'
+        ? cards
+        : cards.filter(card => card.SubExpansion === selectedSubexpansion);
+    };
+
+    // Inicializar la página
+    const initializePage = () => {
+      if (cards.length > 0) {
+        populateSubexpansionFilter(cards); // Llenar el filtro dinámicamente
+        renderCards(cards);               // Renderizar las cartas inicialmente
+      } else {
+        cardsContainer.innerHTML = '<p class="text-center">No results found.</p>';
+      }
+    };
+
+    // Función para llenar dinámicamente el select con las subexpansiones
+    const populateSubexpansionFilter = (cards) => {
+      // Obtener una lista única de subexpansiones
+      const subexpansions = [...new Set(cards.map(card => card.SubExpansion))];
+
+      // Limpiar el select antes de llenarlo
+      subexpansionFilter.innerHTML = '<option value="all">All Subexpansions</option>';
+
+      // Crear una opción para cada subexpansión
+      subexpansions.forEach(subexpansion => {
+        const option = document.createElement('option');
+        option.value = subexpansion;
+        option.textContent = subexpansion;
+        subexpansionFilter.appendChild(option);
       });
-    } else {
-      cardsContainer.innerHTML = '<p class="text-center">No results found.</p>';
-    }
-  };
+    };
 
-  // Función para llenar la lista desplegable de subexpansiones
-  const populateSubexpansionFilter = (cards) => {
-    const subexpansions = [...new Set(cards.map(card => card.SubExpansion))];
-    subexpansionFilter.innerHTML = '<option value="all">All Subexpansions</option>';
-    subexpansions.forEach(subexpansion => {
-      const option = document.createElement('option');
-      option.value = subexpansion;
-      option.textContent = subexpansion;
-      subexpansionFilter.appendChild(option);
+    subexpansionFilter.addEventListener('change', () => {
+      const selectedSubExpansion = subexpansionFilter.value;
+
+      // Filtrar las cartas según la subexpansión seleccionada
+      const filteredCards = selectedSubExpansion === 'all'
+        ? cards // Mostrar todas las cartas si selecciona "All Subexpansions"
+        : cards.filter(card => card.SubExpansion === selectedSubExpansion);
+
+      // Reiniciar a la página 1
+      currentPage = 1;
+
+      // Renderizar las cartas filtradas
+      renderCards(filteredCards);
+
+      // Actualizar los controles de paginación
+      updatePaginationControls(filteredCards.length);
     });
-  };
 
-  // Manejar el cambio en la lista desplegable
-  subexpansionFilter.addEventListener('change', () => {
-    const selectedSubexpansion = subexpansionFilter.value;
-    const filteredCards = selectedSubexpansion === 'all'
-      ? cards
-      : cards.filter(card => card.SubExpansion === selectedSubexpansion);
-    renderCards(filteredCards);
+    initializePage();
   });
 
-  // Inicializar la página
-  if (cards.length > 0) {
-    populateSubexpansionFilter(cards);
-    renderCards(cards);
-  } else {
-    cardsContainer.innerHTML = '<p class="text-center">No results found.</p>';
-  }
-});
   </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  
 </body>
 </html>
