@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewSubExpansion - Pokémon Card Inventory</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #000;
+    }
+    nav {
+      background-color: #000;
+    }
+    nav .navbar-brand img {
+      height: 40px;
+    }
+    nav a {
+      color: #fff;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #cccccc;
+    }
+    header {
+      text-align: center;
+      padding: 30px 0;
+      background-color: #f8f9fa;
+      border-bottom: 2px solid #000;
+    }
+    header h1 {
+      font-weight: bold;
+      color: #000;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    h2, h3 {
+      color: #000;
+    }
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .back-button:hover {
+      background-color: #444;
+    }
+    .social-buttons img {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      transition: transform 0.3s ease;
+    }
+    .social-buttons img:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+</body>
+<!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <img src="https://archives.bulbagarden.net/media/upload/thumb/e/e8/Pok%C3%A9mon_World_Championships_logo.png/117px-Pok%C3%A9mon_World_Championships_logo.png">
+      <a class="navbar-brand ms-4" href="../../">Pokémon Card Inventory</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewExpansion/index.html">NewExpansion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewCard/index.html">NewCard</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- Header -->
+    <header>
+      <h1>New Card</h1>
+    </header>
+    <!-- Main Content -->
+    <div class="container">
+      <div class="form-container">
+        <h2>Add a New Card</h2>
+        <form id="addSubExpansionForm">
+          <!-- Selector de Expansiones -->
+          <div class="mb-3">
+            <label for="expansionSelector" class="form-label">Select Expansion</label>
+            <select class="form-select" id="expansionSelector" name="expansion" required>
+              <option value="" disabled selected>Choose an expansion</option>
+              <option value="expansion1">Expansion 1</option>
+              <option value="expansion2">Expansion 2</option>
+              <option value="expansion3">Expansion 3</option>
+            </select>
+          </div>
+          <!-- Selector de SubExpansiones -->
+          <div class="mb-3">
+            <label for="subexpansionSelector" class="form-label">Select Sub-Expansion</label>
+            <select class="form-select" id="subexpansionSelector" name="subexpansion" required>
+              <option value="" disabled selected>Choose an sub-expansion</option>
+              <option value="subexpansion1">SubExpansion 1</option>
+              <option value="subexpansion2">SubExpansion 2</option>
+              <option value="subexpansion3">SubExpansion 3</option>
+            </select>
+          </div>
+          <!-- Nombre de Carta -->
+          <div class="mb-3">
+            <label for="cardName" class="form-label">Card Name</label>
+            <input type="text" class="form-control" id="cardName" name="name" placeholder="Enter card name" required>
+          </div>
+          <!-- Rareza -->
+          <div class="mb-3">
+            <label for="cardRarity" class="form-label">Rarity</label>
+            <input type="text" class="form-control" id="cardRarity" name="rarity" placeholder="Enter card rarity" required>
+          </div>
+          <div class="mb-3">
+            <label for="cardCategory" class="form-label">Category</label>
+            <input type="text" class="form-control" id="cardCategory" name="category" placeholder="Enter card Category" required>
+          </div>
+          <div class="mb-3">
+            <label for="cardNumber" class="form-label">card Number</label>
+            <input type="text" class="form-control" id="cardNumber" name="Number" placeholder="Enter card Number" required>
+          </div>
+          <!-- Selector de cardCondition -->
+          <div class="mb-3">
+            <label for="cardConditionSelector" class="form-label">Select card Condition</label>
+            <select class="form-select" id="cardConditionSelector" name="cardCondition" required>
+              <option value="" disabled selected>Choose an sub-expansion</option>
+              <option value="Mint (M)">Mint (M) - Perfecta</option>
+              <option value="Near Mint (NM)">Near Mint (NM) - Fresca de refuerzo</option>
+              <option value="Excellent (EX)">Excellent (EX) - Desgaste menor</option>
+              <option value="Good (GD)">Good (GD) - Desgaste visible</option>
+              <option value="Light Played (LP)">Light Played (LP) - Desgaste severo</option>
+              <option value="Played (PL)">Played (PL) - Dañada</option>
+              <option value="Poor (PO)">Poor (PO) - Destruida</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="cardPrice" class="form-label">card Price</label>
+            <input type="number" class="form-control" id="cardPrice" name="Price" placeholder="Enter card Price" required>
+          </div>
+          <div class="mb-3">
+            <label for="cardStock" class="form-label">card Stock</label>
+            <input type="number" class="form-control" id="cardStock" name="Stock" placeholder="Enter card Stock" required>
+          </div>
+          <div class="mb-3">
+            <label for="cardURL" class="form-label">card URL</label>
+            <input type="text" class="form-control" id="cardURL" name="URL" placeholder="Enter card URL" required>
+          </div>
+          <!-- Botones -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-success">Confirm</button>
+            <button type="reset" class="btn btn-secondary">Cancel</button>
+          </div>
+        </form>
+        <div id="responseMessage" class="text-center mt-3"></div>      
+      </div>
+    </div>    
+  <!-- Expansion Banners -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <img src="https://tcg.pokemon.com/assets/img/sv-expansions/151/header/en-us/151-large-fallback.jpg" alt="Expedition Base Set Banner" class="img-fluid w-100 mb-3">
+      </div>
+    </div>
+  </div>
+    <!-- Footer -->
+  <footer>
+    Pokémon Card Inventory &copy; 2024
+  </footer>
+      <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
