@@ -16,4 +16,8 @@ class subexpansionsController {
     public function obtenerCartasPorSubexpansion($name) {
         return $this->subexpansionsRepository->obtenerCartasPorSubexpansion($name); // Devolverá un array de cartas
     }
+
+    public function crearSubexpansion($name, $expansion_id) {
+        return $this->subexpansionsRepository->crearSubexpansion($name, $expansion_id);
+    }
 }

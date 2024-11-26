@@ -47,11 +47,34 @@
     $name = json_decode(file_get_contents("php://input"), true);
     return json_encode($subexpansionsController->obtenerCartasPorSubexpansion($name['name']));
   });
-
+  
   $router->post('/cartas/expansion', function() use ($expansionsController) {
     $name = json_decode(file_get_contents("php://input"), true);
     return json_encode($expansionsController->obtenerCartasPorExpansion($name['name']));
   });
   
+  $router->post('/expansion/insertar', function() use ($expansionsController) {
+    $name = json_decode(file_get_contents("php://input"), true);
+    return json_encode($expansionsController->crearExpansion($name['name']));
+  });
+  
+  $router->post('/subexpansion/insertar', function() use ($subexpansionsController) {
+    // Obtener los datos enviados en el cuerpo de la solicitud como un array asociativo
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    // Comprobar que los datos necesarios estén presentes
+    if (isset($data['name']) && isset($data['expansion_id'])) {
+        // Llamar a la función con ambos parámetros: name y expansion_id
+        $resultado = $subexpansionsController->crearSubExpansion($data['name'], $data['expansion_id']);
+        
+        // Retornar un JSON con el resultado
+        return json_encode(["success" => $resultado]);
+    } else {
+        // Si faltan datos, devolver un error
+        return json_encode(["error" => "Faltan parámetros necesarios: name o expansion_id."]);
+    }
+});
+
+
   $router->dispatch();
 
