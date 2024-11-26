@@ -79,4 +79,11 @@ class expansionsRepository implements IExpansions {
         // Retornar los resultados
         return $resultado->fetchAll(PDO::FETCH_ASSOC); // Usamos fetchAll para devolver todas las coincidencias
     }
+
+    public function crearExpansion($name) {
+        $sql = "INSERT INTO Expansions (expansion_id, name) VALUES (NULL, ?);";
+        $resultado = $this->conn->prepare($sql);
+        $resultado->execute([$name]);
+        return $resultado->rowCount() > 0; // Retorna true si se insertó correctamente
+    }
 }

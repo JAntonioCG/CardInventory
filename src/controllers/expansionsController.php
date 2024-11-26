@@ -16,4 +16,7 @@
     public function obtenerCartasPorExpansion ($name) {
       return $this->expansionsRepository->obtenerCartasPorExpansion($name);  // Devolverá un array de cartas
     }  
+    public function crearExpansion ($name) {
+      return $this->expansionsRepository->crearExpansion($name);  // Devolverá un array de cartas
+    }  
   }

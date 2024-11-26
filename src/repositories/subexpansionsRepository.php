@@ -84,4 +84,14 @@ class subexpansionsRepository implements ISubexpansions {
         // Retornar los resultados
         return $resultado->fetchAll(PDO::FETCH_ASSOC);
     }
+
+		public function crearSubexpansion($name, $expansion_id) {
+			$sql = "INSERT INTO Subexpansions (subexpansion_id, name, expansion_id) VALUES (NULL, ?, ?);";
+			$resultado = $this->conn->prepare($sql);
+			// Pasar los valores como un array a execute
+			$resultado->execute([$name, $expansion_id]);
+	
+			// Retornar si se insertó correctamente
+			return $resultado->rowCount() > 0; // Retorna true si se insertó correctamente
+	}	
 }
