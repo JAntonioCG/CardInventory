@@ -76,7 +76,6 @@
   
 </body>
 <!-- Navigation Bar -->
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <img src="https://archives.bulbagarden.net/media/upload/thumb/e/e8/Pok%C3%A9mon_World_Championships_logo.png/117px-Pok%C3%A9mon_World_Championships_logo.png">
@@ -92,8 +91,59 @@
           <li class="nav-item">
             <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewExpansion/index.html">NewExpansion</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewCard/index.html">NewCard</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+    <!-- Header -->
+    <header>
+      <h1>New Sub-Expansion</h1>
+    </header>
+    <!-- Main Content -->
+    <div class="container">
+      <div class="form-container">
+        <h2>Add a New Sub-Expansion</h2>
+        <form id="addSubExpansionForm">
+          <!-- Selector de Expansiones -->
+          <div class="mb-3">
+            <label for="expansionSelector" class="form-label">Select Expansion</label>
+            <select class="form-select" id="expansionSelector" name="expansion" required>
+              <option value="" disabled selected>Choose an expansion</option>
+              <option value="expansion1">Expansion 1</option>
+              <option value="expansion2">Expansion 2</option>
+              <option value="expansion3">Expansion 3</option>
+            </select>
+          </div>
+          <!-- Nombre de Sub-Expansión -->
+          <div class="mb-3">
+            <label for="expansionName" class="form-label">Sub Expansion Name</label>
+            <input type="text" class="form-control" id="expansionName" name="name" placeholder="Enter sub-expansion name" required>
+          </div>
+          <!-- Botones -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-success">Confirm</button>
+            <button type="reset" class="btn btn-secondary">Cancel</button>
+          </div>
+        </form>
+        <div id="responseMessage" class="text-center mt-3"></div>      
+      </div>
+    </div>    
+  <!-- Expansion Banners -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <img src="https://tcg.pokemon.com/assets/img/sv-expansions/151/header/en-us/151-large-fallback.jpg" alt="Expedition Base Set Banner" class="img-fluid w-100 mb-3">
+      </div>
+    </div>
+  </div>
+    <!-- Footer -->
+  <footer>
+    Pokémon Card Inventory &copy; 2024
+  </footer>
+      <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
