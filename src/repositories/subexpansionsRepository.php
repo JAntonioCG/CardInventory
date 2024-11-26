@@ -88,7 +88,6 @@ class subexpansionsRepository implements ISubexpansions {
 		public function crearSubexpansion($name, $expansion_id) {
 			$sql = "INSERT INTO Subexpansions (subexpansion_id, name, expansion_id) VALUES (NULL, ?, ?);";
 			$resultado = $this->conn->prepare($sql);
-			
 			// Pasar los valores como un array a execute
 			$resultado->execute([$name, $expansion_id]);
 	

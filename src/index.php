@@ -71,7 +71,7 @@
         return json_encode(["success" => $resultado]);
     } else {
         // Si faltan datos, devolver un error
-        return json_encode(["error" => "Faltan parámetros necesarios: name o expansion_id."]);
+        return json_encode(["error" => "Faltan parametros necesarios: name o expansion_id."]);
     }
 });
 
