@@ -91,8 +91,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <img src="https://archives.bulbagarden.net/media/upload/thumb/e/e8/Pok%C3%A9mon_World_Championships_logo.png/117px-Pok%C3%A9mon_World_Championships_logo.png" alt="Logo">
-      <h1>ㅤ</h1>
-      <a class="navbar-brand" href="../../">Pokémon Card Inventory</a>
+      <a class="navbar-brand ms-4" href="../../">Pokémon Card Inventory</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -102,7 +101,7 @@
             <a class="nav-link" href="../../">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewSubExpansion/">NewSubExpansion</a>
+            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewSubExpansion/">New SubExpansion</a>
           </li>
         </ul>
       </div>
@@ -118,7 +117,7 @@
   <div class="container">
     <div class="form-container">
       <h2>Add a New Expansion</h2>
-      <form action="/add_expansion" method="POST">
+      <form id="addExpansionForm">
         <div class="mb-3">
           <label for="expansionName" class="form-label">Expansion Name</label>
           <input type="text" class="form-control" id="expansionName" name="name" placeholder="Enter expansion name" required>
@@ -128,6 +127,7 @@
           <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
       </form>
+      <div id="responseMessage" class="text-center mt-3"></div>      
     </div>
   </div>
 <!-- Expansion Banners -->
@@ -143,6 +143,35 @@
   <footer>
     Pokémon Card Inventory &copy; 2024
   </footer>
+
+  <script>
+    document.getElementById('addExpansionForm').addEventListener('submit', async (event) => {
+      event.preventDefault(); // Evitar el envío predeterminado del formulario
+      const name = document.getElementById('expansionName').value;
+      const responseMessage = document.getElementById('responseMessage');
+  
+      try {
+        const response = await fetch('http://localhost:8888/cardinventory/src/index.php/expansion/insertar', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name }),
+        });
+  
+        if (response.ok) {
+          const result = await response.json();
+          responseMessage.textContent = result ? "Expansion added successfully!" : "Failed to add expansion.";
+          responseMessage.style.color = result ? "green" : "red";
+        } else {
+          responseMessage.textContent = "Server error.";
+          responseMessage.style.color = "red";
+        }
+      } catch (error) {
+        responseMessage.textContent = "An error occurred.";
+        responseMessage.style.color = "red";
+        console.error(error);
+      }
+    });
+  </script>  
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
