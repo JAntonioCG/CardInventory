@@ -89,10 +89,10 @@
             <a class="nav-link" href="../../">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewExpansion/index.html">NewExpansion</a>
+            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewExpansion/">New Expansion</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewCard/index.html">NewCard</a>
+            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewCard/">New Card</a>
           </li>
         </ul>
       </div>
@@ -106,29 +106,26 @@
     <div class="container">
       <div class="form-container">
         <h2>Add a New Sub-Expansion</h2>
+        <!-- Formulario para agregar sub-expansión -->
         <form id="addSubExpansionForm">
-          <!-- Selector de Expansiones -->
           <div class="mb-3">
             <label for="expansionSelector" class="form-label">Select Expansion</label>
             <select class="form-select" id="expansionSelector" name="expansion" required>
               <option value="" disabled selected>Choose an expansion</option>
-              <option value="expansion1">Expansion 1</option>
-              <option value="expansion2">Expansion 2</option>
-              <option value="expansion3">Expansion 3</option>
             </select>
           </div>
-          <!-- Nombre de Sub-Expansión -->
           <div class="mb-3">
             <label for="expansionName" class="form-label">Sub Expansion Name</label>
             <input type="text" class="form-control" id="expansionName" name="name" placeholder="Enter sub-expansion name" required>
           </div>
-          <!-- Botones -->
           <div class="text-center">
             <button type="submit" class="btn btn-success">Confirm</button>
             <button type="reset" class="btn btn-secondary">Cancel</button>
           </div>
         </form>
-        <div id="responseMessage" class="text-center mt-3"></div>      
+
+        <!-- Mensaje de respuesta -->
+        <div id="responseMessage" class="text-center mt-3"></div>
       </div>
     </div>    
   <!-- Expansion Banners -->
@@ -145,5 +142,6 @@
   </footer>
       <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

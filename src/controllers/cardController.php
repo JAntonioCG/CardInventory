@@ -9,6 +9,10 @@
       $this->cardRepository = new cardRepository();
     }
 
+    public function agregarCarta($carta) {
+      return $this->cardRepository->agregarCarta($carta);
+    }
+
     public function obtenerCartas() {
       return $this->cardRepository->obtenerCartas();
     }

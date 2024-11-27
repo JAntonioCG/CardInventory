@@ -130,49 +130,24 @@
       <div id="responseMessage" class="text-center mt-3"></div>      
     </div>
   </div>
-<!-- Expansion Banners -->
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-12">
-      <img src="https://tcg.pokemon.com/assets/img/sv-expansions/151/header/en-us/151-large-fallback.jpg" alt="Expedition Base Set Banner" class="img-fluid w-100 mb-3">
+
+  <!-- Expansion Banners -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <img src="https://tcg.pokemon.com/assets/img/sv-expansions/151/header/en-us/151-large-fallback.jpg" alt="Expedition Base Set Banner" class="img-fluid w-100 mb-3">
+      </div>
     </div>
   </div>
-</div>
 
   <!-- Footer -->
   <footer>
     Pokémon Card Inventory &copy; 2024
   </footer>
 
-  <script>
-    document.getElementById('addExpansionForm').addEventListener('submit', async (event) => {
-      event.preventDefault(); // Evitar el envío predeterminado del formulario
-      const name = document.getElementById('expansionName').value;
-      const responseMessage = document.getElementById('responseMessage');
+  <!-- External JavaScript -->
+  <script src="main.js"></script>
   
-      try {
-        const response = await fetch('http://localhost:8888/cardinventory/src/index.php/expansion/insertar', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name }),
-        });
-  
-        if (response.ok) {
-          const result = await response.json();
-          responseMessage.textContent = result ? "Expansion added successfully!" : "Failed to add expansion.";
-          responseMessage.style.color = result ? "green" : "red";
-        } else {
-          responseMessage.textContent = "Server error.";
-          responseMessage.style.color = "red";
-        }
-      } catch (error) {
-        responseMessage.textContent = "An error occurred.";
-        responseMessage.style.color = "red";
-        console.error(error);
-      }
-    });
-  </script>  
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
