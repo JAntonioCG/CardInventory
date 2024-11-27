@@ -33,6 +33,12 @@
     return json_encode($subexpansionsController->obtenerSubexpansiones());
   });
 
+  $router->post('/subexpansiones/expansion_id', function() use ($subexpansionsController) {
+    $data = json_decode(file_get_contents("php://input"), true);
+    $expansion_id = $data['expansion_id'];  // Asegúrate de que 'expansion_id' esté presente en el cuerpo de la solicitud
+    return json_encode($subexpansionsController->obtenerSubexpansionesPorExpansion($expansion_id));
+  });
+
   $router->post('/cartas/nombre', function() use ($cardController) {
     $name = json_decode(file_get_contents("php://input"), true);
     return json_encode($cardController->obtenerCartasPorNombre($name['name']));
@@ -52,6 +58,11 @@
     $name = json_decode(file_get_contents("php://input"), true);
     return json_encode($expansionsController->obtenerCartasPorExpansion($name['name']));
   });
+  
+  $router->post('/cartas/insertar', function() use ($cardController) {
+    $carta = json_decode(file_get_contents("php://input"));
+    return json_encode($cardController->agregarCarta($carta));
+});
   
   $router->post('/expansion/insertar', function() use ($expansionsController) {
     $name = json_decode(file_get_contents("php://input"), true);

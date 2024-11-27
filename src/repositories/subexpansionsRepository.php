@@ -11,11 +11,19 @@ class subexpansionsRepository implements ISubexpansions {
 	}
 
   public function obtenerSubexpansiones() {
-    $sql = "SELECT name FROM subexpansions";
+    $sql = "SELECT * FROM subexpansions";
     $resultado = $this->conn->prepare($sql);
     $resultado->execute();
     return $resultado->fetchAll(PDO::FETCH_ASSOC);
   }
+
+  public function obtenerSubexpansionesPorExpansion($expansion_id) {
+    $sql = "SELECT * FROM subexpansions WHERE expansion_id = :expansion_id";
+    $resultado = $this->conn->prepare($sql);
+    $resultado->bindParam(':expansion_id', $expansion_id);
+    $resultado->execute();
+    return $resultado->fetchAll(PDO::FETCH_ASSOC);
+}
 
   public function obtenerCartasPorSubexpansion($name){
         // Definir la lista de expansiones que se deben considerar

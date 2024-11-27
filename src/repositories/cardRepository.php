@@ -97,7 +97,8 @@
 
       // Retornar los resultados
       return $resultado->fetchAll(PDO::FETCH_ASSOC);  // Devuelve todas las coincidencias
-    }    
+    }
+
     public function obtenerCartasPorSubexpansion($subexpansion_id) {
       $sql = "SELECT * FROM Cards WHERE subexpansion_id LIKE :subexpansion_id";
       $resultado = $this->conn->prepare($sql);
@@ -105,5 +106,21 @@
       $resultado->bindParam(':subexpansion_id', $searchTerm);
       $resultado->execute();
       return $resultado->fetchAll(PDO::FETCH_ASSOC);  // Usamos fetchAll para devolver todas las coincidencias
+    }
+
+    public function agregarCarta ($carta) {
+      $sql =  "INSERT INTO cards (name, subexpansion_id, rarity, category, card_number, card_url) 
+              VALUES (:name, :subexpansion_id, :rarity, :category, :card_number, :card_url)";
+      $resultado = $this->conn->prepare($sql);
+      $resultado->bindParam(':name', $carta->name);
+      $resultado->bindParam(':subexpansion_id', $carta->subexpansion_id);
+      $resultado->bindParam(':rarity', $carta->rarity);
+      $resultado->bindParam(':category', $carta->category);
+      $resultado->bindParam(':card_number', $carta->card_number);
+      $resultado->bindParam(':card_url', $carta->card_url);
+      if ($resultado->execute()) {
+        return ['mensaje' => 'Carta Creada'];
+      }
+      return ['mensaje' => 'Error al crear la carta'];
     }
   }
