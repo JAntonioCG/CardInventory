@@ -12,17 +12,29 @@
 
   require_once BASE_PATH . '/simpleRouter.php';
   require_once BASE_PATH . '/controllers/cardController.php';
+  require_once BASE_PATH . '/controllers/conditionController.php';
+  require_once BASE_PATH . '/controllers/inventoryController.php';
   require_once BASE_PATH . '/controllers/expansionsController.php';
   require_once BASE_PATH . '/controllers/subexpansionsController.php';
   require_once BASE_PATH . '/middleware/authMiddleware.php';
 
   $router = new SimpleRouter();
   $cardController = new cardController();
+  $conditionController = new conditionController();
+  $inventoryController = new inventoryController();
   $expansionsController = new expansionsController();
   $subexpansionsController = new subexpansionsController();
 
   $router->get('/cartas', function() use ($cardController) {
     return json_encode($cardController->obtenerCartas());
+  });
+
+  $router->get('/cartas/newId', function() use ($cardController) {
+    return json_encode($cardController->nuevoId());
+  });
+
+  $router->get('/condiciones', function() use ($conditionController) {
+    return json_encode($conditionController->obtenerCondiciones());
   });
 
   $router->get('/expansiones', function() use ($expansionsController) {
@@ -62,8 +74,19 @@
   $router->post('/cartas/insertar', function() use ($cardController) {
     $carta = json_decode(file_get_contents("php://input"));
     return json_encode($cardController->agregarCarta($carta));
-});
+  });
   
+  $router->post('/inventory/insertar', function() use ($inventoryController) {
+    $data = json_decode(file_get_contents("php://input"));
+    if (!$data || !isset($data->card_id, $data->condition_id, $data->price, $data->stock)) {
+        return json_encode([
+            'error' => true,
+            'mensaje' => 'Datos inválidos o incompletos en la solicitud.'
+        ]);
+    }
+    return json_encode($inventoryController->anadirInventario($data));
+});
+
   $router->post('/expansion/insertar', function() use ($expansionsController) {
     $name = json_decode(file_get_contents("php://input"), true);
     return json_encode($expansionsController->crearExpansion($name['name']));
@@ -84,8 +107,6 @@
         // Si faltan datos, devolver un error
         return json_encode(["error" => "Faltan parametros necesarios: name o expansion_id."]);
     }
-});
-
+  });
 
   $router->dispatch();
-

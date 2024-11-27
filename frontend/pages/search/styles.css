@@ -1,0 +1,100 @@
+.flex-nowrap {
+  display: flex;
+  scrollbar-width: none;
+}
+.overflow-auto {
+  overflow-x: auto;
+}
+.col-auto {
+  flex: 0 0 auto;
+}
+.btn-outline-primary {
+  margin: 0 0.5rem;
+}
+/* Ocultar completamente la barra de desplazamiento horizontal */
+.custom-scroll {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+.custom-scroll::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari y Opera */
+}
+/* Card List */
+.custom-card {
+  width: 216.5px;  /* Asegura el ancho correcto */
+  height: 304px;   /* Asegura la altura de la tarjeta */
+  border-radius: 12px;
+  border-width: 9px;
+  margin-left: 0px;
+  margin-top: 0px;
+  flex-shrink: 0;  /* No se reducirá el tamaño de las tarjetas */
+}
+
+.custom-card-img {
+  width: 100%;  /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+  height: 304px; /* Asegura la altura de la imagen */
+  border-radius: 9px;  /* Mantiene el borde redondeado de la imagen */
+  object-fit: cover;  /* Mantiene la proporción de la imagen */
+}
+
+.carousel-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+}
+/* Card Listings Section */
+.card-body {
+  padding: 15px;
+}
+
+/* Asegurarse de que el texto esté centrado */
+.card-body.text-center {
+  text-align: center;
+}
+
+/* Precio: más grande */
+.card-text.price {
+  font-size: 1.5rem;  /* Tamaño mayor para el precio */
+  font-weight: bold;  /* Hacer el precio más destacado */
+  margin-bottom: 10px; /* Espacio debajo del precio */
+}
+
+/* Nombre de la carta: más pequeño */
+.card-title {
+  font-size: 1rem;  /* Tamaño más pequeño */
+  font-weight: normal;
+  margin-bottom: 5px; /* Espacio debajo del nombre */
+}
+
+/* Expansión: aún más pequeño */
+.card-text.expansion {
+  font-size: 0.85rem;  /* Tamaño más pequeño para la expansión */
+  color: #6c757d;  /* Color gris para la expansión */
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.scrolling-container {
+  scrollbar-width: none;
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.card {
+  min-width: 216.5px;  /* Ajusta el ancho mínimo de las tarjetas */
+  flex-shrink: 0;
+  border-radius: 16px;
+  margin: 0; /* Elimina márgenes adicionales que pudieran causar desajustes */
+}
+
+.card-body {
+  padding: 10px; /* Ajusta el padding si quieres reducir el espacio alrededor del texto */
+}
