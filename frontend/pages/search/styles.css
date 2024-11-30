@@ -65,6 +65,7 @@
 
 /* Nombre de la carta: más pequeño */
 .card-title {
+  font-style: italic;
   font-size: 1rem;  /* Tamaño más pequeño */
   font-weight: bold;
   font-style: italic;
