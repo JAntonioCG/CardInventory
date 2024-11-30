@@ -65,6 +65,11 @@
     $name = json_decode(file_get_contents("php://input"), true);
     return json_encode($subexpansionsController->obtenerCartasPorSubexpansion($name['name']));
   });
+
+  $router->post('/cartas/subexpansionId', function() use ($cardController) {
+    $subexpansion_id = json_decode(file_get_contents("php://input"), true);
+    return json_encode($cardController->obtenerCartasPorSubexpansionId($subexpansion_id['subexpansion_id']));
+  });
   
   $router->post('/cartas/expansion', function() use ($expansionsController) {
     $name = json_decode(file_get_contents("php://input"), true);

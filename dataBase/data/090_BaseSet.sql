@@ -1997,5 +1997,5 @@ CALL AddCardToInventory(
     'Good',                             -- Condición
     8.50,                               -- Precio
     12,                                 -- Stock
-    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_155_R_V_EN_LG.png'  -- URL
+    'https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/SSH/SSH_155_R_EN_LG.png'  -- URL
 );
