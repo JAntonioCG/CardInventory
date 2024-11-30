@@ -5,5 +5,5 @@ interface ICarta {
   public function nuevoId();
   public function obtenerCartasPorNombre($name);
   public function obtenerCartasPorCategoria($category);
-  public function obtenerCartasPorSubexpansion($subexpansion_id);
+  public function obtenerCartasPorSubexpansionId($subexpansion_id);
 }

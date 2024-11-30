@@ -28,7 +28,7 @@
     public function obtenerCartasPorCategoria($category) {
       return $this->cardRepository->obtenerCartasPorCategoria($category);  // Devolverá un array de cartas
     }    
-    public function obtenerCartasPorSubexpansion($subexpansion_id) {
-      return $this->cardRepository->obtenerCartasPorSubexpansion($subexpansion_id);  // Devolverá un array de cartas
+    public function obtenerCartasPorSubexpansionId($subexpansion_id) {
+      return $this->cardRepository->obtenerCartasPorSubexpansionId($subexpansion_id);  // Devolverá un array de cartas
     } 
   }

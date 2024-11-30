@@ -106,7 +106,7 @@
       return $resultado->fetchAll(PDO::FETCH_ASSOC);  // Devuelve todas las coincidencias
     }
 
-    public function obtenerCartasPorSubexpansion($subexpansion_id) {
+    public function obtenerCartasPorSubexpansionId($subexpansion_id) {
       $sql = "SELECT * FROM Cards WHERE subexpansion_id LIKE :subexpansion_id";
       $resultado = $this->conn->prepare($sql);
       $searchTerm = "$subexpansion_id";  // Usamos LIKE para hacer coincidencias parciales

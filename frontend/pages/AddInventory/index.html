@@ -27,10 +27,12 @@
             <a class="nav-link" href="../../">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/AddInventory/">Add Inventory</a>
+            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewExpansion/index.html">New
+              Expansion</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewExpansion/">New Expansion</a>
+            <a class="nav-link" href="http://localhost:8888/CardInventory/frontend/pages/NewCard/index.html">New
+              Card</a>
           </li>
         </ul>
       </div>
@@ -58,26 +60,12 @@
             <option value="" disabled selected>Choose an sub-expansion</option>
           </select>
         </div>
-        <!-- Nombre de Carta -->
+        <!-- Selector de Nombre de Carta -->
         <div class="mb-3">
-          <label for="cardName" class="form-label">Card Name</label>
-          <input type="text" class="form-control" id="cardName" name="name" placeholder="Enter card name" required>
-        </div>
-        <!-- Rareza -->
-        <div class="mb-3">
-          <label for="cardRarity" class="form-label">Rarity</label>
-          <input type="text" class="form-control" id="cardRarity" name="rarity" placeholder="Enter card rarity"
-            required>
-        </div>
-        <div class="mb-3">
-          <label for="cardCategory" class="form-label">Category</label>
-          <input type="text" class="form-control" id="cardCategory" name="category" placeholder="Enter card Category"
-            required>
-        </div>
-        <div class="mb-3">
-          <label for="cardNumber" class="form-label">card Number</label>
-          <input type="text" class="form-control" id="cardNumber" name="Number" placeholder="Enter card Number"
-            required>
+          <label for="cardNameSelector" class="form-label">Select Card Name</label>
+          <select id="cardSelector" class="form-select" disabled required>
+            <option value="" disabled selected>Choose a card</option>
+          </select>          
         </div>
         <!-- Selector de cardCondition -->
         <div class="mb-3">
@@ -92,10 +80,6 @@
         <div class="mb-3">
           <label for="cardStock" class="form-label">card Stock</label>
           <input type="number" class="form-control" id="cardStock" name="Stock" placeholder="Enter card Stock" required>
-        </div>
-        <div class="mb-3">
-          <label for="cardURL" class="form-label">card URL</label>
-          <input type="text" class="form-control" id="cardURL" name="URL" placeholder="Enter card URL" required>
         </div>
         <!-- Botones -->
         <div class="text-center">
